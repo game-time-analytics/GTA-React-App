@@ -1,10 +1,10 @@
 import superagent from 'superagent';
 import React, { useState, useContext } from 'react';
-import { LoginContext } from './context.js';
+import { LoginContext } from '../context/loginContext';
 
 const API = process.env.REACT_APP_API;
 
-const If = props => {
+const If = (props) => {
   return !!props.condition ? props.children : null;
 };
 
@@ -39,7 +39,7 @@ function Login() {
     superagent
       .post(`${API}/signin`)
       .auth(username, password)
-      .then(response => {
+      .then((response) => {
         let token = response.text;
         loginMethodFromContext(token);
       })
