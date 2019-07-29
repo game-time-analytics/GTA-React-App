@@ -10,7 +10,7 @@ const PlayerStats = () => {
 
   return (
       <React.Fragment>
-        <h1>HPlayerelrje!</h1>
+        <h1>Playerstats!</h1>
       </React.Fragment>
   );
 };

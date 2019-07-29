@@ -10,7 +10,8 @@ const Home = () => {
 
   return (
       <React.Fragment>
-        <h1>Hhome!</h1>
+        <h1>Home!</h1>
+        <img src={ require('../../assets/Football-Analytics-Limitations.jpg') } alt="GTA logo" />
       </React.Fragment>
   );
 };

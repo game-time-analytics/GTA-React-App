@@ -2,9 +2,10 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import Header from '../header/header';
 import Footer from '../footer/footer';
-// import Story from "../Story/Story";
+import Admin from '../admin/admin';
 import Home from '../home/home';
 import PlayerStats from '../playerStats/playerStats';
+import AboutUs from '../aboutUs/aboutUs';
 
 /**
  * App class that brings in the header component and has the two routes for this assignment
@@ -19,7 +20,8 @@ class App extends React.Component {
         <Header />
         <Route exact path="/" component={Home} />
         <Route path="/playerStats" component={PlayerStats} />
-        <img src={ require('../../assets/Football-Analytics-Limitations.jpg') } alt="GTA logo" />
+        <Route path="/admin" component={Admin} />
+        <Route path="/aboutUs" component={AboutUs} />
         <Footer />
       </div>
     );
