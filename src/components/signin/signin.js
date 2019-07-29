@@ -37,7 +37,7 @@ function Login() {
   const handleSubmit = (e, loginMethodFromContext) => {
     e.preventDefault();
     superagent
-      .post(`${API}/signin`)
+      .get(`${API}/signin`)
       .auth(username, password)
       .then((response) => {
         let token = response.text;
