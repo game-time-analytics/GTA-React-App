@@ -6,6 +6,8 @@ import Admin from '../admin/admin';
 import Home from '../home/home';
 import PlayerStats from '../playerStats/playerStats';
 import AboutUs from '../aboutUs/aboutUs';
+import Signin from '../signin/signin';
+import Signup from '../signup/signup';
 
 /**
  * App class that brings in the header component and has the two routes for this assignment
@@ -22,6 +24,8 @@ class App extends React.Component {
         <Route path="/playerStats" component={PlayerStats} />
         <Route path="/admin" component={Admin} />
         <Route path="/aboutUs" component={AboutUs} />
+        <Route path="/signin" component={Signin} />
+        <Route path="/signup" component={Signup} />
         <Footer />
       </div>
     );
