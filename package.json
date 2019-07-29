@@ -15,6 +15,8 @@
     "eslint-plugin-jest": "^22.14.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.3",
+    "jest-mock": "^24.8.0",
+    "jsonwebtoken": "^8.5.1",
     "node-sass": "4.12.0",
     "react": "16.8.6",
     "react-cookies": "0.1.1",
@@ -23,7 +25,8 @@
     "react-router-dom": "5.0.1",
     "react-scripts": "3.0.1",
     "react-styleguidist": "9.1.13",
-    "superagent": "5.1.0"
+    "superagent": "5.1.0",
+    "superagent-mock": "^3.7.0"
   },
   "devDependencies": {
     "typescript": "3.3.3"
