@@ -5,9 +5,21 @@ import './styles.scss';
 
 function App() {
   return (
-    <div className='App'>
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+
+    <div className="App">
+      <h1>Game Time Analytics</h1>
+      <header>
+        <nav>
+          <ul>
+            <li>Player Stats</li>
+            <li>Admin</li>
+            <li>About Us</li>
+          </ul>
+        </nav>
+      </header>
+      <img src={ require('./assets/Football-Analytics-Limitations.jpg') } alt="GTA logo" />
+      <footer>2019 GTA Online &#169;</footer>
+
     </div>
   );
 }
