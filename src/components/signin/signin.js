@@ -18,22 +18,6 @@ function Login() {
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
 
-  // const handleUsername = e => {
-  //   setUsername(e.target.value);
-  // };
-
-  // const handlePassword = e => {
-  //   setPassword(e.target.value);
-  // };
-
-  // const handleChange = e => {
-  //   if(e.target.name === 'username'){
-  //     setUsername(e.target.value);
-  //   }else{
-  //     setPassword(e.target.value);
-  //   }
-  // }
-
   const handleSubmit = (e, loginMethodFromContext) => {
     e.preventDefault();
     superagent

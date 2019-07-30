@@ -21,11 +21,8 @@ function Signup() {
 
   const handleSubmit = (e, loginMethodFromContext) => {
     const obj = {
-      // eslint-disable-next-line quote-props
       username,
-      // eslint-disable-next-line quote-props
       email,
-      // eslint-disable-next-line quote-props
       password,
     };
 
