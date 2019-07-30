@@ -41,9 +41,6 @@ function Signup() {
   };
   return (
     <>
-      <If condition={context.loggedIn}>
-        <button onClick={context.logout}>Log Out</button>
-      </If>
       <If condition={!context.loggedIn}>
         <div>
           <form onSubmit={e => handleSubmit(e, context.login)}>
