@@ -11,7 +11,7 @@ const If = (props) => {
 
 /**
  * Login component
- * @description logs a user by utilizing context to add their information and provide them a token
+ * logs a user by utilizing context to add their information and provide them a token
  */
 
 function Login() {
