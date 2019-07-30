@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Auth from '../auth/auth';
+import { LoginContext } from '../context/loginContext';
 import './header.scss';
 
+const If = (props) => {
+  return props.condition ? props.children : null;
+};
 /**
  * Header/nav bar links for home and code
  * @description header/nav bar
  */
 const Header = () => {
+  const context = useContext(LoginContext);
   return (
     <header>
       <h1>Game Time Analytics</h1>
@@ -27,6 +32,11 @@ const Header = () => {
           </Auth>
           <span>
             <Link to="/aboutUs">About Us</Link>
+          </span>
+          <span>
+          <If condition={context.loggedIn}>
+            <button onClick={context.logout}>Log Out</button>
+          </If>
           </span>
       </nav>
     </header>

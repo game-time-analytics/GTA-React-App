@@ -18,27 +18,8 @@ function Signup() {
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
   const [email, setEmail] = useState();
-  // const username = '';
-  // const password = '';
-  // const email = '';
-  // const handleUsername = e => {
-  //   setUsername(e.target.value);
-  // };
-
-  // const handlePassword = e => {
-  //   setPassword(e.target.value);
-  // };
-
-  // const handleChange = e => {
-  //   if(e.target.name === 'username'){
-  //     setUsername(e.target.value);
-  //   }else{
-  //     setPassword(e.target.value);
-  //   }
-  // }
 
   const handleSubmit = (e, loginMethodFromContext) => {
-    // console.log(e.target.username.value);
     const obj = {
       // eslint-disable-next-line quote-props
       'username': username,
@@ -53,7 +34,6 @@ function Signup() {
       .post(`${API}/signup`)
       .send(obj)
       .then((response) => {
-        console.log(response);
         const token = response.text;
         loginMethodFromContext(token);
       })
