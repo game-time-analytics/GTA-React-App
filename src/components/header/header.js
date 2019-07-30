@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Auth from '../auth/auth';
 import { LoginContext } from '../context/loginContext';
+import { PlayerContext } from '../context/playerContext';
 import './header.scss';
 
 const If = (props) => {
@@ -13,6 +14,7 @@ const If = (props) => {
  */
 const Header = () => {
   const context = useContext(LoginContext);
+  const playerContext = useContext(PlayerContext);
   return (
     <header>
       <h1>Game Time Analytics</h1>
@@ -35,7 +37,7 @@ const Header = () => {
           </span>
           <span>
           <If condition={context.loggedIn}>
-            <Link to="/" onClick={context.logout}>Log Out</Link>
+            <Link to="/" onClick={() => { context.logout(); playerContext.resetSelected(); } }>Log Out</Link>
           </If>
           </span>
       </nav>

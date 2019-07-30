@@ -40,11 +40,12 @@ const PlayerStats = () => {
             />
             <input type="submit" value="playerName" />
           </form>
+          <img src={`${context.selectedPlayer.image}`}/>
           <h2>{context.selectedPlayer.name}</h2>
           <h2>{context.selectedPlayer.passing}</h2>
           <h2>{context.selectedPlayer.touchdowns}</h2>
           <h2>{context.selectedPlayer.interceptions}</h2>
-          <img src={`${context.selectedPlayer.image}`}/>
+          
       </React.Fragment>
   );
 };

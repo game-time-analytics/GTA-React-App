@@ -16,6 +16,7 @@ class PlayerProvider extends React.Component {
       getPlayers: this.getPlayers,
       findPlayer: this.findPlayer,
       handleInputName: this.handleInputName,
+      resetSelected: this.resetSelected,
     };
   }
 
@@ -39,7 +40,7 @@ class PlayerProvider extends React.Component {
       // console.log(player.name);
       // console.log(e.target);
       if (player.name === this.state.selectedName) {
-        console.log('inside if');
+        // console.log('inside if');
         this.setState({ selectedPlayer: player });
       }
       // console.log(this.state.selectedPlayer);
@@ -51,6 +52,11 @@ class PlayerProvider extends React.Component {
     // console.log(e.target.value);
     this.setState({ selectedName: e.target.value });
   };
+
+  resetSelected = () => {
+    console.log('reset');
+    this.setState({ selectedPlayer: '' });
+  }
 
   render() {
     return (
