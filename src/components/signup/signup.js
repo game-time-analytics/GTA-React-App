@@ -5,7 +5,7 @@ import { LoginContext } from '../context/loginContext';
 const API = process.env.REACT_APP_API;
 
 const If = (props) => {
-  return !!props.condition ? props.children : null;
+  return props.condition ? props.children : null;
 };
 
 /**
@@ -36,12 +36,36 @@ function Signup() {
   // }
 
   const handleSubmit = (e, loginMethodFromContext) => {
+    // console.log(e.target.username.value);
+    const obj = {
+      // eslint-disable-next-line quote-props
+      'username': e.target.username.value,
+      // eslint-disable-next-line quote-props
+      'email': e.target.email.value,
+      // eslint-disable-next-line quote-props
+      'password': e.target.password.value,
+    }
+
+    const testObj = {
+      // eslint-disable-next-line quotes
+      // eslint-disable-next-line quote-props
+      'username': 'test344435',
+      // eslint-disable-next-line quote-props
+      'email': 'test@test.com',
+      // eslint-disable-next-line quote-props
+      'password': 'pass',
+      // "role": "admin"
+    }
     e.preventDefault();
     superagent
-      .get(`${API}/signup`)
-      .auth(username, password, email)
+      .post(`${API}/signup`)
+      // .set('Content-Type', 'application/json')
+    // .send(`{"username": ${e.target.username.value},"password": ${e.target.password.value}, "email": ${e.target.email.value} }`)
+      // .auth(username, password)
+      .send(obj)
       .then((response) => {
-        let token = response.text;
+        console.log(response);
+        const token = response.text;
         loginMethodFromContext(token);
       })
       .catch(console.error);
