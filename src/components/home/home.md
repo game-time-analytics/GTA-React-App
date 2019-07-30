@@ -1,3 +1,7 @@
+Home Component
+
+Renders home and links to signin, signup and logo image
+
 ```jsx
  return (
       <React.Fragment>

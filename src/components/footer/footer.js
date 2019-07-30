@@ -2,7 +2,7 @@ import React from 'react';
 import './footer.scss';
 
 /**
- * Footer component that renders a basic footer with the app name and copyright info
+ * @description Footer component that renders a basic footer with the app name and copyright info
  */
 
 const Footer = () => {

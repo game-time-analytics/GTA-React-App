@@ -2,8 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 /**
- * Home component
- * says home and links to signin, signup and logo image
+ * @description Home component that renders home and links to signin, signup and logo image
  */
 const Home = () => {
   return (

@@ -1,3 +1,7 @@
+Header component
+
+Renders  a basic header with navigation links and title of the app
+
 ```jsx
 
 return (

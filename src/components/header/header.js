@@ -9,7 +9,7 @@ const If = (props) => {
   return props.condition ? props.children : null;
 };
 /**
- * Header component that renders  a basic header with navigation links and title of the app
+ * @description Header that renders a basic header with navigation links and title of the app
  */
 const Header = () => {
   const context = useContext(LoginContext);
