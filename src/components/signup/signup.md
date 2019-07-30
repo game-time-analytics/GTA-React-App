@@ -1,3 +1,8 @@
+Sign up component
+
+Allows a user to signup in order to fully utilize the app
+
+
 ```jsx
 return(
   <form onSubmit={e => handleSubmit(e, context.login)}>

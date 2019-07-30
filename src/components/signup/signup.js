@@ -9,8 +9,7 @@ const If = (props) => {
 };
 
 /**
- * Signup component
- * allows a user to signup in order to fully utilize the app
+ * @description Signup component allows a user to signup in order to fully utilize the app
  */
 
 function Signup() {
