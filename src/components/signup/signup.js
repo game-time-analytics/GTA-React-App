@@ -9,8 +9,8 @@ const If = (props) => {
 };
 
 /**
- * login function
- * @description logs a user in by contacting context to add their infor and get a token
+ * Signup component
+ * @description allows a user to signup in order to fully utilize the app
  */
 
 function Signup() {

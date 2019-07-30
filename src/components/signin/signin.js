@@ -5,12 +5,13 @@ import { LoginContext } from '../context/loginContext';
 const API = process.env.REACT_APP_API;
 
 const If = (props) => {
+  // eslint-disable-next-line no-extra-boolean-cast
   return !!props.condition ? props.children : null;
 };
 
 /**
- * login function
- * @description logs a user in by contacting context to add their infor and get a token
+ * Login component
+ * @description logs a user by utilizing context to add their information and provide them a token
  */
 
 function Login() {

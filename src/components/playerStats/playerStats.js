@@ -8,8 +8,9 @@ import { PlayerContext } from '../context/playerContext';
 
 /**
  * PlayerStats component
- * @description uses player context to get passing yards, touchdowns, interceptions, and name
+ * @description search player by name to get their stats
  */
+
 const PlayerStats = () => {
 
   const context = useContext(PlayerContext);
