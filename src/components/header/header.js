@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Auth from '../auth/auth';
 import './header.scss';
 
 /**
@@ -14,12 +15,16 @@ const Header = () => {
           <span>
             <Link to="/">Home</Link>
           </span>
-          <span>
-            <Link to="/playerStats">Player Stats</Link>
-          </span>
-          <span>
-            <Link to="/admin">Admin</Link>
-          </span>
+          <Auth capability="read">
+            <span>
+              <Link to="/playerStats">Player Stats</Link>
+            </span>
+          </Auth>
+          <Auth capability="superuser">
+            <span>
+              <Link to="/admin">Admin</Link>
+            </span>
+          </Auth>
           <span>
             <Link to="/aboutUs">About Us</Link>
           </span>
