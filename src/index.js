@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './components/app/app';
 import LoginProvider from './components/context/loginContext';
 
-
+import './reset.scss';
 import './styles.scss';
 
 function Main() {
