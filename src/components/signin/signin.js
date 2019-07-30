@@ -10,8 +10,7 @@ const If = (props) => {
 };
 
 /**
- * Login component
- * logs a user by utilizing context to add their information and provide them a token
+ * @description Login component logs a user by utilizing context to add their information and provide them a token
  */
 
 function Login() {
