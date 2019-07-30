@@ -3,7 +3,7 @@ import './footer.scss';
 
 /**
  * Footer component
- * @description basic footer that has app name and copyright info
+ * basic footer that has app name and copyright info
  */
 
 const Footer = () => {
