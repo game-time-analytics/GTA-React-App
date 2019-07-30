@@ -8,7 +8,7 @@ import { PlayerContext } from '../context/playerContext';
 
 /**
  * PlayerStats component
- * @description search player by name to get their stats
+ * search player by name to get their stats
  */
 
 const PlayerStats = () => {
