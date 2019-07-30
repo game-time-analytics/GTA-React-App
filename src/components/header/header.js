@@ -4,7 +4,7 @@ import Auth from '../auth/auth';
 import './header.scss';
 
 /**
- * Header/nav bar links for home and code
+ * Header/nav bar links for home, player stats, admin, and aboutUs
  * @description header/nav bar
  */
 const Header = () => {
