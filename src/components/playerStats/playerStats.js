@@ -64,26 +64,29 @@ const PlayerStats = () => {
             />
             <input type="submit" value="playerName" />
           </form>
-          <img src={`${context.selectedPlayer.image}`}/>
+          {!!context.selectedPlayer.image && <img src={`${context.selectedPlayer.image}`}/>}
           <h2>{context.selectedPlayer.name}</h2>
-          <h2>{context.selectedPlayer.passing}</h2><h2>{passing}</h2>
-          <h2>{context.selectedPlayer.touchdowns}</h2><h2>{touchdowns}</h2>
-          <h2>{context.selectedPlayer.interceptions}</h2><h2>{interceptions}</h2>
+          <h2>Yearly Passing Yards:{context.selectedPlayer.passing}</h2>
+          <h2>Calculated Passing Points Per Week:{passing}</h2>
+          <h2>Yearly Touchdowns:{context.selectedPlayer.touchdowns}</h2>
+          <h2>Calculated Touchdown Points Per Week:{touchdowns}</h2>
+          <h2>Yearly Interceptions{context.selectedPlayer.interceptions}</h2>
+          <h2>Calculated Interception Points Per Week:{interceptions}</h2>
           <h1>Total: {passing + touchdowns + interceptions}</h1>
           <input
-              placeholder="passing"
+              placeholder="Passing Points"
               name="passing"
               type="number"
               onChange={handlePassing}
             />
             <input
-              placeholder="touchdowns"
+              placeholder="Touchdown Points"
               name="touchdowns"
               type="number"
               onChange={handleTouchdowns}
             />
             <input
-              placeholder="interceptions"
+              placeholder="Interception Points"
               name="interceptions"
               type="number"
               onChange={handleInterceptions}
