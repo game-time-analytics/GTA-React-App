@@ -7,7 +7,8 @@ import { PlayerContext } from '../context/playerContext';
 // };
 
 /**
- * Home class that contains a hello world for when the home route is hit
+ * PlayerStats component
+ * @description uses player context to get passing yards, touchdowns, interceptions, and name
  */
 const PlayerStats = () => {
 
