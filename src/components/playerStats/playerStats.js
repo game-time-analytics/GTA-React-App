@@ -2,8 +2,9 @@ import React, { useState, useContext, useEffect } from 'react';
 import { PlayerContext } from '../context/playerContext';
 
 /**
- * Home class that contains a hello world for when the home route is hit
+ * @description PlayerStats component search player by name to get their stats
  */
+
 const PlayerStats = () => {
   const context = useContext(PlayerContext);
   const [passing, setPassing] = useState();
