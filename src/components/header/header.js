@@ -35,7 +35,7 @@ const Header = () => {
           </span>
           <span>
           <If condition={context.loggedIn}>
-            <button onClick={context.logout}>Log Out</button>
+            <Link to="/" onClick={context.logout}>Log Out</Link>
           </If>
           </span>
       </nav>
