@@ -40,7 +40,7 @@ function Login() {
       .get(`${API}/signin`)
       .auth(username, password)
       .then((response) => {
-        let token = response.text;
+        const token = response.text;
         loginMethodFromContext(token);
       })
       .catch(console.error);

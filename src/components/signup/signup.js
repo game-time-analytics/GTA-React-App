@@ -22,11 +22,11 @@ function Signup() {
   const handleSubmit = (e, loginMethodFromContext) => {
     const obj = {
       // eslint-disable-next-line quote-props
-      'username': username,
+      username,
       // eslint-disable-next-line quote-props
-      'email': email,
+      email,
       // eslint-disable-next-line quote-props
-      'password': password,
+      password,
     };
 
     e.preventDefault();
