@@ -1,7 +1,6 @@
 import React from 'react';
 import cookie from 'react-cookies';
 import jwt from 'jsonwebtoken';
-import  { Redirect } from 'react-router-dom';
 
 export const LoginContext = React.createContext();
 
