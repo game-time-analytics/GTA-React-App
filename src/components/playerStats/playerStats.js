@@ -1,23 +1,16 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { PlayerContext } from '../context/playerContext';
 
-
-// const If = (props) => {
-//   return !!props.condition ? props.children : null;
-// };
-
 /**
  * Home class that contains a hello world for when the home route is hit
  */
 const PlayerStats = () => {
-
   const context = useContext(PlayerContext);
   const [passing, setPassing] = useState();
   const [touchdowns, setTouchdowns] = useState();
   const [interceptions, setInterceptions] = useState();
 
   useEffect(() => {
-    // console.log("update incoming");\
     setPassing(0);
     setTouchdowns(0);
     setInterceptions(0);
@@ -26,7 +19,6 @@ const PlayerStats = () => {
 
   const handlePassing = (e) => {
     e.preventDefault();
-    // console.log(e.target.value);
     const pYards = context.selectedPlayer.passing / 16;
     const yardEstimate = pYards * e.target.value;
     setPassing(yardEstimate);
@@ -34,7 +26,6 @@ const PlayerStats = () => {
 
   const handleTouchdowns = (e) => {
     e.preventDefault();
-    // console.log(e.target.value);
     const tDowns = context.selectedPlayer.touchdowns / 16;
     const touchDownEstimate = tDowns * e.target.value;
     setTouchdowns(touchDownEstimate);
@@ -42,7 +33,6 @@ const PlayerStats = () => {
 
   const handleInterceptions = (e) => {
     e.preventDefault();
-    // console.log(e.target.value);
     const interceptionsWeek = context.selectedPlayer.interceptions / 16;
     const interceptionEstimate = interceptionsWeek * e.target.value;
     setInterceptions(interceptionEstimate);
