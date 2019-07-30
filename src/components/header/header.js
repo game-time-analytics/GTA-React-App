@@ -10,7 +10,7 @@ const If = (props) => {
 };
 /**
  * Header component
- * @description header that has navigation links and title of app
+ * header that has navigation links and title of app
  */
 const Header = () => {
   const context = useContext(LoginContext);
