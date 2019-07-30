@@ -1,4 +1,5 @@
 import React from 'react';
+import superagent from 'superagent';
 
 export const PlayerContext = React.createContext();
 
@@ -16,6 +17,14 @@ class PlayerProvider extends React.Component {
 
   getPlayers = () => {
     // this.setState({ test: 'test2' });
+    superagent
+      .get(`${API}/api/v1/players`)
+      .then((response) => {
+        // console.log(response.text);
+        console.log(response.body.results);
+        this.setState({ players: response.body.results });
+      })
+      .catch(console.error);
   }
 
   render() {

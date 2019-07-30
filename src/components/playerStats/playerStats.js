@@ -24,7 +24,10 @@ const PlayerStats = () => {
   return (
       <React.Fragment>
         <h1>Playerstats!</h1>
-        <h2>{context.test}</h2>
+        <h2>{context.players.map((player, idx) => (
+          <p key={idx}>Name: {player.name} Passing Yards: {player.passing} Touchdowns: {player.touchdowns}{player.interceptions}<img src={`${player.image}`}/></p>
+          
+        ))}</h2>
       </React.Fragment>
   );
 };
