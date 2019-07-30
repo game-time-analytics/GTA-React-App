@@ -40,16 +40,13 @@ function Login() {
       .get(`${API}/signin`)
       .auth(username, password)
       .then((response) => {
-        let token = response.text;
+        const token = response.text;
         loginMethodFromContext(token);
       })
       .catch(console.error);
   };
   return (
     <>
-      <If condition={context.loggedIn}>
-        <button onClick={context.logout}>Log Out</button>
-      </If>
       <If condition={!context.loggedIn}>
         <div>
           <form onSubmit={e => handleSubmit(e, context.login)}>
