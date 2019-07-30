@@ -54,8 +54,8 @@ class PlayerProvider extends React.Component {
   };
 
   resetSelected = () => {
-    console.log('reset');
-    this.setState({ selectedPlayer: '' });
+    // console.log('reset');
+    this.setState({ selectedPlayer: [] });
   }
 
   render() {
