@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Auth from '../auth/auth';
+import './header.scss';
 
 /**
  * Header/nav bar links for home and code
