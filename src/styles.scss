@@ -1,4 +1,34 @@
-.App {
+$primaryColor: #002A5C;
+$secondaryColor: #2D5980;
+$accentColor: #7AC142;
+$highlightColor: #B2B7BB;
+
+
+
+body {
+  background-color: whitesmoke;
+}
+
+.container {
   font-family: sans-serif;
   text-align: center;
+  color: $accentColor;
+}
+
+header {
+  
+  background-color: $secondaryColor;
+ 
+  h1{
+    font-size: 150%;
+  }
+  a {
+    margin: 5%;
+    color: $highlightColor;
+    text-decoration: none;
+  }
+}
+
+footer {
+  background-color: $secondaryColor;
 }
