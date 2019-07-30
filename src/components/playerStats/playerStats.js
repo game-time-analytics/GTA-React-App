@@ -1,17 +1,19 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { PlayerContext } from '../context/playerContext';
 
+
 /**
  * Home class that contains a hello world for when the home route is hit
  */
 const PlayerStats = () => {
 
-  const { state, dispatch } = useContext(PlayerContext);
+  const context = useContext(PlayerContext);
   // const [username, setUsername] = useState();
   // const [password, setPassword] = useState();
 
   useEffect(() => {
     // console.log("update incoming");
+    context.getPlayers();
   }, []);
 
   /**

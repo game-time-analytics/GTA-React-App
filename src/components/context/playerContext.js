@@ -2,12 +2,19 @@ import React from 'react';
 
 export const PlayerContext = React.createContext();
 
+const API = process.env.REACT_APP_API;
+
 class PlayerProvider extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       players: [],
+      getPlayers: this.getPlayers,
     };
+  }
+
+  getPlayers = () => {
+
   }
 
   render() {
