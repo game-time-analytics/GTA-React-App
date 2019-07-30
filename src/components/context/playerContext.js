@@ -9,12 +9,13 @@ class PlayerProvider extends React.Component {
     super(props);
     this.state = {
       players: [],
+      test: '',
       getPlayers: this.getPlayers,
     };
   }
 
   getPlayers = () => {
-
+    // this.setState({ test: 'test2' });
   }
 
   render() {

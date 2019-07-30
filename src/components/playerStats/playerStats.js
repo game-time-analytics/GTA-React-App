@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { PlayerContext } from '../context/playerContext';
+import { statement } from '@babel/template';
 
 
 /**
@@ -23,6 +24,7 @@ const PlayerStats = () => {
   return (
       <React.Fragment>
         <h1>Playerstats!</h1>
+        <h2>{context.test}</h2>
       </React.Fragment>
   );
 };
