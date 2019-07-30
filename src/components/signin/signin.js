@@ -5,12 +5,12 @@ import { LoginContext } from '../context/loginContext';
 const API = process.env.REACT_APP_API;
 
 const If = (props) => {
+  // eslint-disable-next-line no-extra-boolean-cast
   return !!props.condition ? props.children : null;
 };
 
 /**
- * login function
- * @description logs a user in by contacting context to add their infor and get a token
+ * @description Login component logs a user by utilizing context to add their information and provide them a token
  */
 
 function Login() {
@@ -18,38 +18,19 @@ function Login() {
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
 
-  // const handleUsername = e => {
-  //   setUsername(e.target.value);
-  // };
-
-  // const handlePassword = e => {
-  //   setPassword(e.target.value);
-  // };
-
-  // const handleChange = e => {
-  //   if(e.target.name === 'username'){
-  //     setUsername(e.target.value);
-  //   }else{
-  //     setPassword(e.target.value);
-  //   }
-  // }
-
   const handleSubmit = (e, loginMethodFromContext) => {
     e.preventDefault();
     superagent
       .get(`${API}/signin`)
       .auth(username, password)
       .then((response) => {
-        let token = response.text;
+        const token = response.text;
         loginMethodFromContext(token);
       })
       .catch(console.error);
   };
   return (
     <>
-      <If condition={context.loggedIn}>
-        <button onClick={context.logout}>Log Out</button>
-      </If>
       <If condition={!context.loggedIn}>
         <div>
           <form onSubmit={e => handleSubmit(e, context.login)}>
