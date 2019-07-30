@@ -9,8 +9,8 @@ const If = (props) => {
   return props.condition ? props.children : null;
 };
 /**
- * Header/nav bar links for home and code
- * @description header/nav bar
+ * Header component
+ * @description header that has navigation links and title of app
  */
 const Header = () => {
   const context = useContext(LoginContext);

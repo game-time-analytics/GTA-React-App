@@ -2,13 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 /**
- * Home class that contains a hello world for when the home route is hit
+ * Home component
+ * @description says home and links to signin, signup and logo image
  */
 const Home = () => {
-  /**
-   * render function that returns a simple hello world
-   */
-
   return (
       <React.Fragment>
         <h1>Home!</h1>
