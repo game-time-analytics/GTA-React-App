@@ -1,7 +1,8 @@
 import React from 'react';
 
 /**
- * Home class that contains a hello world for when the home route is hit
+ * AboutUs 
+ * @description 
  */
 const AboutUs = () => {
   /**
