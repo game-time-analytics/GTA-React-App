@@ -18,7 +18,9 @@ function Signup() {
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
   const [email, setEmail] = useState();
-
+  // const username = '';
+  // const password = '';
+  // const email = '';
   // const handleUsername = e => {
   //   setUsername(e.target.value);
   // };
@@ -39,29 +41,16 @@ function Signup() {
     // console.log(e.target.username.value);
     const obj = {
       // eslint-disable-next-line quote-props
-      'username': e.target.username.value,
+      'username': username,
       // eslint-disable-next-line quote-props
-      'email': e.target.email.value,
+      'email': email,
       // eslint-disable-next-line quote-props
-      'password': e.target.password.value,
-    }
+      'password': password,
+    };
 
-    const testObj = {
-      // eslint-disable-next-line quotes
-      // eslint-disable-next-line quote-props
-      'username': 'test344435',
-      // eslint-disable-next-line quote-props
-      'email': 'test@test.com',
-      // eslint-disable-next-line quote-props
-      'password': 'pass',
-      // "role": "admin"
-    }
     e.preventDefault();
     superagent
       .post(`${API}/signup`)
-      // .set('Content-Type', 'application/json')
-    // .send(`{"username": ${e.target.username.value},"password": ${e.target.password.value}, "email": ${e.target.email.value} }`)
-      // .auth(username, password)
       .send(obj)
       .then((response) => {
         console.log(response);
