@@ -1,17 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { PlayerContext } from '../context/playerContext';
-import Form from 'react-jsonschema-form';
-
-import playersSchema from './playersSchema';
-
-const uiSchema = {
-  _id: { 'ui:widget': 'hidden' },
-  __v: { 'ui:widget': 'hidden' }
-};
-
-const schemas = {
-  players: playersSchema,
-};
 
 /**
  * @description PlayerStats component search player by name to get their stats
@@ -29,6 +17,7 @@ const Admin = () => {
     // setInterceptions(0);
     context.getPlayers();
   }, []);
+
 
   // const handlePassing = (e) => {
   //   e.preventDefault();
@@ -101,7 +90,7 @@ const Admin = () => {
               type="number"
               onChange={handleInterceptions}
             /> */}
-            <form onSubmit={state.callAPI}>
+            {/* <form onSubmit={state.callAPI}>
             <section>
               {/* <input
                 type="text"
@@ -148,7 +137,7 @@ const Admin = () => {
                 </label>
               </div>
             </section>
-            </form>
+            </form> */}
           
       </React.Fragment>
   );
