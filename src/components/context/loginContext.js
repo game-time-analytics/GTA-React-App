@@ -17,6 +17,7 @@ const setLoginState = (token) => {
   } catch (e) {
     // if bad token, flag to logged off and delete token
     loggedIn = false;
+    // eslint-disable-next-line no-param-reassign
     token = null;
   }
   // return new state
@@ -78,6 +79,7 @@ class LoginProvider extends React.Component {
   render() {
     return (
       <LoginContext.Provider value={this.state}>
+        {/* eslint-disable-next-line react/prop-types */}
         {this.props.children}
       </LoginContext.Provider>
     );

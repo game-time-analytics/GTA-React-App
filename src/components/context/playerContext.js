@@ -25,35 +25,27 @@ class PlayerProvider extends React.Component {
     superagent
       .get(`${API}/api/v1/players`)
       .then((response) => {
-        // console.log(response.text);
-        // console.log(response.body.results);
         this.setState({ players: response.body.results });
       })
+      // eslint-disable-next-line no-console
       .catch(console.error);
   }
 
   findPlayer = (e) => {
     e.preventDefault();
-    // console.log(e);
-    // console.log(this.state.players);
     this.state.players.forEach((player) => {
-      // console.log(player.name);
-      // console.log(e.target);
       if (player.name === this.state.selectedName) {
-        // console.log('inside if');
         this.setState({ selectedPlayer: player });
       }
-      // console.log(this.state.selectedPlayer);
     });
   }
 
   handleInputName = (e) => {
-    // console.log('inputname');
-    // console.log(e.target.value);
     this.setState({ selectedName: e.target.value });
   };
 
   resetSelected = () => {
+    // eslint-disable-next-line no-console
     console.log('reset');
     this.setState({ selectedPlayer: '' });
   }

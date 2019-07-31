@@ -10,7 +10,7 @@ const If = (props) => {
 };
 
 /**
- * @description Login component logs a user by utilizing context to add their information and provide them a token
+ * @description Login component that gets their username and password and provides them a token
  */
 
 function Login() {
@@ -18,22 +18,13 @@ function Login() {
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
 
-  // const handleUsername = e => {
-  //   setUsername(e.target.value);
-  // };
 
-  // const handlePassword = e => {
-  //   setPassword(e.target.value);
-  // };
-
-  // const handleChange = e => {
-  //   if(e.target.name === 'username'){
-  //     setUsername(e.target.value);
-  //   }else{
-  //     setPassword(e.target.value);
-  //   }
-  // }
-
+  /**
+   * @param {Object} e 
+   * @param {Function} loginMethodFromContext 
+   * @description makes a call to the API and verifies username and password is correct.
+   */
+  
   const handleSubmit = (e, loginMethodFromContext) => {
     e.preventDefault();
     superagent
@@ -43,6 +34,7 @@ function Login() {
         const token = response.text;
         loginMethodFromContext(token);
       })
+      // eslint-disable-next-line no-console
       .catch(console.error);
   };
   return (
