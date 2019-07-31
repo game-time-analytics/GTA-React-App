@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { PlayerContext } from '../context/playerContext';
 import AdminForm from './form';
-import AdminProvider from '../context/adminContext';
+// import AdminProvider from '../context/adminContext';
 
 /**
  * @description PlayerStats component search player by name to get their stats
@@ -47,7 +47,7 @@ const Admin = () => {
    */
 
   return (
-    <AdminProvider>
+    // <AdminProvider>
       <React.Fragment>
         <h1>Admin!</h1>
 
@@ -68,7 +68,7 @@ const Admin = () => {
           <h2>Yearly Interceptions{context.selectedPlayer.interceptions}</h2>
           <AdminForm />
       </React.Fragment>
-    </AdminProvider>
+    // </AdminProvider>
   );
 };
 

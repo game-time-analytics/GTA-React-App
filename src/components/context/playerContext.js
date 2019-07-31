@@ -18,6 +18,9 @@ class PlayerProvider extends React.Component {
       selectPlayer: this.selectPlayer,
       handleInputName: this.handleInputName,
       resetSelected: this.resetSelected,
+      handlePut: this.handlePut,
+      handlePost: this.handlePost,
+      handleDelete: this.handleDelete,
     };
   }
 
@@ -46,6 +49,29 @@ class PlayerProvider extends React.Component {
 
   resetSelected = () => {
     this.setState({ selectedPlayer: [] });
+  }
+  
+  handlePut(payload) {
+    console.log(payload);
+    console.log('handleput');
+    // console.log(payload.record._id);
+    console.log(payload.formData._id);
+  }
+
+  handlePost(payload) {
+    console.log(payload);
+
+
+    console.log(payload.formData._id);
+    console.log('handlpost');
+  }
+
+  handleDelete(payload) {
+    console.log(payload);
+
+
+    // console.log(payload.formData._id);
+    console.log('handleDelete');
   }
 
   render() {
