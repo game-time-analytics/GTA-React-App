@@ -21,12 +21,13 @@ const AdminForm = () => {
 
     if (parseInt(playerContext.id, 10) >= 0) {
       adminContext.handlePut({
-        id: playerContext.id,
-        model: this.props.model,
-        record: formData,
+        // id: playerContext.id,
+        // model: this.props.model,
+        formData,
+        // record: formData,
       });
     } else {
-      adminContext.handlePost({ model: this.props.model, record: formData });
+      adminContext.handlePost({ formData });
     }
   };
 
@@ -34,9 +35,10 @@ const AdminForm = () => {
       <div>
         <h3>Edit Record {playerContext.id}</h3>
         <Form
-          schema={schemas}
+          schema={schemas.players}
           uiSchema={uiSchema}
-          formData={this.props.records[this.props.model][playerContext.id]}
+          // formData={this.props.records[this.props.model][playerContext.id]}
+          formData={playerContext.selectedPlayer}
           onSubmit={handleSubmit}
         />
       </div>

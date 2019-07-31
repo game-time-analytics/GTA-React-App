@@ -19,11 +19,18 @@ class AdminProvider extends React.Component {
     };
   }
 
-  handlePut() {
+  handlePut(payload) {
+    console.log(payload);
     console.log('handleput');
+    // console.log(payload.record._id);
+    console.log(payload.formData._id);
   }
 
-  handlePost() {
+  handlePost(payload) {
+    console.log(payload);
+
+
+    console.log(payload.formData._id);
     console.log('handlpost');
   }
 
