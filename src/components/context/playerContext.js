@@ -13,6 +13,7 @@ class PlayerProvider extends React.Component {
       selectedPlayer: [],
       selectedName: '',
       test: '',
+      id: '',
       getPlayers: this.getPlayers,
       findPlayer: this.findPlayer,
       handleInputName: this.handleInputName,
@@ -34,6 +35,7 @@ class PlayerProvider extends React.Component {
     this.state.players.forEach((player) => {
       if (player.name === this.state.selectedName) {
         this.setState({ selectedPlayer: player });
+        this.setState({ id: player._id });
       }
     });
   }

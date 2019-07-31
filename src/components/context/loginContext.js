@@ -17,7 +17,6 @@ const setLoginState = (token) => {
   } catch (e) {
     // if bad token, flag to logged off and delete token
     loggedIn = false;
-    token = null;
   }
   // return new state
   return { user, loggedIn, token };
