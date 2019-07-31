@@ -27,6 +27,7 @@ const Admin = () => {
               placeholder="playerName"
               name="playerName"
               onChange={context.handleInputName}
+              value={context.selectedName}
             />
             <input type="submit" value="playerName" />
           </form>

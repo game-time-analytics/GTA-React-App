@@ -52,44 +52,40 @@ class PlayerProvider extends React.Component {
     this.setState({ selectedPlayer: [], id: '' });
   }
 
-  handlePut(payload) {
-
+  handlePut = (payload) => {
     superagent
       .put(`${API}/api/v1/players/${payload.formData._id}`)
       .send(payload.formData)
       .set('Authorization', `Bearer ${cookie}`)
       .then((response) => {
-        console.log(response.body);
-        // this.getPlayers();
         this.setState({ players: [...this.state.players, response.body] });
       })
       .catch(console.error);
   }
 
-  handlePost(payload) {
-
+  handlePost = (payload) => {
     superagent
       .post(`${API}/api/v1/players`)
       .send(payload.formData)
       .set('Authorization', `Bearer ${cookie}`)
       .then((response) => {
-        console.log(response.body);
-        // this.setState({ players: response.body.results });
-        console.log('STATE: ', this.state);
         this.setState({ players: [...this.state.players, response.body] });
       })
       .catch(console.error);
   }
 
-  handleDelete(payload) {
-
+  handleDelete = (id) => {
     superagent
-      .delete(`${API}/api/v1/players/${payload}`)
-      .send(payload.formData)
+      .delete(`${API}/api/v1/players/${id}`)
       .set('Authorization', `Bearer ${cookie}`)
       .then((response) => {
-        console.log(response.body);
-        // this.setState({ players: response.body.results });
+        const playersList = this.state.players.filter(player => player._id !== id);
+        this.setState({ 
+          players: playersList, 
+          selectedPlayer: [], 
+          id: '', 
+          selectedName: '', 
+        });
       })
       .catch(console.error);
   }
@@ -102,6 +98,5 @@ class PlayerProvider extends React.Component {
     );
   }
 }
-
 
 export default PlayerProvider;
