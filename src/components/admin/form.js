@@ -16,6 +16,7 @@ const schemas = {
 const AdminForm = () => {
   const playerContext = useContext(PlayerContext);
   const adminContext = useContext(AdminContext);
+
   const handleSubmit = (form) => {
     const { formData } = form;
 
@@ -34,6 +35,8 @@ const AdminForm = () => {
   return (
       <div>
         <h3>Edit Record {playerContext.id}</h3>
+        <button onClick={playerContext.resetSelected}>Reset</button>
+        <button onClick={() => adminContext.handleDelete(playerContext.id)}>Delete Player</button>
         <Form
           schema={schemas.players}
           uiSchema={uiSchema}

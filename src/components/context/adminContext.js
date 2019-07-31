@@ -16,6 +16,7 @@ class AdminProvider extends React.Component {
       // logout: this.logout,
       handlePut: this.handlePut,
       handlePost: this.handlePost,
+      handleDelete: this.handleDelete,
     };
   }
 
@@ -32,6 +33,14 @@ class AdminProvider extends React.Component {
 
     console.log(payload.formData._id);
     console.log('handlpost');
+  }
+
+  handleDelete(payload) {
+    console.log(payload);
+
+
+    // console.log(payload.formData._id);
+    console.log('handleDelete');
   }
 
   render() {
