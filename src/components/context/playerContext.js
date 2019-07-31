@@ -5,6 +5,8 @@ export const PlayerContext = React.createContext();
 
 const API = process.env.REACT_APP_API;
 
+const cookie = document.cookie.substring(5);
+
 class PlayerProvider extends React.Component {
   constructor(props) {
     super(props);
@@ -50,7 +52,7 @@ class PlayerProvider extends React.Component {
   resetSelected = () => {
     this.setState({ selectedPlayer: [] });
   }
-  
+
   handlePut(payload) {
     console.log(payload);
     console.log('handleput');
@@ -59,11 +61,30 @@ class PlayerProvider extends React.Component {
   }
 
   handlePost(payload) {
-    console.log(payload);
-
-
-    console.log(payload.formData._id);
-    console.log('handlpost');
+    // console.log(payload);
+    console.log(document.cookie);
+    console.log(payload.formData);
+    // console.log('handlpost');
+    console.log(cookie);
+    // const obj = {
+    //   name: payload.formData.name,
+    //   description: payload.formData.description,
+    //   passing: payload.formData.passing,
+    //   touchdowns: payload.formData.touchdowns,
+    //   interceptions: payload.formData.interceptions,
+    //   team: payload.formData.team,
+    //   image: payload.formData.image,
+    // };
+    // console.log(obj);
+    superagent
+      .post(`${API}/api/v1/players`)
+      .send(payload.formData)
+      .set('Authorization', `Bearer ${cookie}`)
+      .then((response) => {
+        console.log(response.body);
+        // this.setState({ players: response.body.results });
+      })
+      .catch(console.error);
   }
 
   handleDelete(payload) {
