@@ -9,7 +9,7 @@ const MyForm = () => {
 
   return (
 
-          <form onSubmit={context.findPlayer}>
+          <form onSubmit={context.selectPlayer}>
             <input
               placeholder="playerName"
               name="playerName"

@@ -51,7 +51,7 @@ const Admin = () => {
       <React.Fragment>
         <h1>Admin!</h1>
 
-          <form onSubmit={context.findPlayer}>
+          <form onSubmit={context.selectPlayer}>
             <input
               placeholder="playerName"
               name="playerName"

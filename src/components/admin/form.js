@@ -21,12 +21,7 @@ const AdminForm = () => {
     const { formData } = form;
 
     if (parseInt(playerContext.id, 10) >= 0) {
-      adminContext.handlePut({
-        // id: playerContext.id,
-        // model: this.props.model,
-        formData,
-        // record: formData,
-      });
+      adminContext.handlePut({ formData });
     } else {
       adminContext.handlePost({ formData });
     }

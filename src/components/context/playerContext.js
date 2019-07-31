@@ -15,7 +15,7 @@ class PlayerProvider extends React.Component {
       test: '',
       id: '',
       getPlayers: this.getPlayers,
-      findPlayer: this.findPlayer,
+      selectPlayer: this.selectPlayer,
       handleInputName: this.handleInputName,
       resetSelected: this.resetSelected,
     };
@@ -30,12 +30,12 @@ class PlayerProvider extends React.Component {
       .catch(console.error);
   }
 
-  findPlayer = (e) => {
+  selectPlayer = (e) => {
     e.preventDefault();
     this.state.players.forEach((player) => {
       if (player.name === this.state.selectedName) {
-        this.setState({ selectedPlayer: player });
-        this.setState({ id: player._id });
+        this.setState({ selectedPlayer: player, id: player._id });
+        // this.setState({ id: player._id });
       }
     });
   }
