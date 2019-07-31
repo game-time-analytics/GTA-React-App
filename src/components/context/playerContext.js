@@ -8,7 +8,7 @@ export const PlayerContext = React.createContext();
 const API = process.env.REACT_APP_API;
 
 /**
- * Player Provider class component that sets the initial state
+ * @description Player Provider class component that sets the initial state
  */
 
 class PlayerProvider extends React.Component {

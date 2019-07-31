@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { LoginContext } from '../context/loginContext';
 
-const If = props => {
+const If = (props) => {
   return props.condition ? props.children : null;
 };
 
@@ -11,16 +11,16 @@ const If = props => {
  * Auth class component
  * @description class that determines whether the user has authorization to render
  */
-const Auth = props => {
+const Auth = (props) => {
   const context = useContext(LoginContext);
 
-  let okToRender =
-    context.loggedIn &&
-    (props.capability
-      ? context.user.capabilities &&
-        context.user.capabilities.includes(props.capability)
+  const okToRender = context.loggedIn
+    && (props.capability
+      ? context.user.capabilities
+        && context.user.capabilities.includes(props.capability)
       : true);
 
+  // eslint-disable-next-line react/prop-types
   return <If condition={okToRender}>{props.children}</If>;
 };
 

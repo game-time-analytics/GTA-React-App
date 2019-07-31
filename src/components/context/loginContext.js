@@ -30,6 +30,7 @@ const setLoginState = (token) => {
 /**
  * LoginProvider class component
  * @description handles the state of login and loutout
+ * @ignore
  */
 
 class LoginProvider extends React.Component {
