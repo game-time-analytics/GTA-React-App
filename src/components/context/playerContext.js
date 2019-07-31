@@ -40,7 +40,6 @@ class PlayerProvider extends React.Component {
     this.state.players.forEach((player) => {
       if (player.name === this.state.selectedName) {
         this.setState({ selectedPlayer: player, id: player._id });
-        // this.setState({ id: player._id });
       }
     });
   }
@@ -50,41 +49,25 @@ class PlayerProvider extends React.Component {
   };
 
   resetSelected = () => {
-    this.setState({ selectedPlayer: [] });
+    this.setState({ selectedPlayer: [], id: '' });
   }
 
   handlePut(payload) {
-    console.log(payload);
-    console.log('handleput');
-    // console.log(payload.record._id);
-    console.log(payload.formData._id);
+
     superagent
       .put(`${API}/api/v1/players/${payload.formData._id}`)
       .send(payload.formData)
       .set('Authorization', `Bearer ${cookie}`)
       .then((response) => {
         console.log(response.body);
-        // this.setState({ players: response.body.results });
+        // this.getPlayers();
+        this.setState({ players: [...this.state.players, response.body] });
       })
       .catch(console.error);
   }
 
   handlePost(payload) {
-    // console.log(payload);
-    // console.log(document.cookie);
-    // console.log(payload.formData);
-    // console.log('handlpost');
-    // console.log(cookie);
-    // const obj = {
-    //   name: payload.formData.name,
-    //   description: payload.formData.description,
-    //   passing: payload.formData.passing,
-    //   touchdowns: payload.formData.touchdowns,
-    //   interceptions: payload.formData.interceptions,
-    //   team: payload.formData.team,
-    //   image: payload.formData.image,
-    // };
-    // console.log(obj);
+
     superagent
       .post(`${API}/api/v1/players`)
       .send(payload.formData)
@@ -92,16 +75,14 @@ class PlayerProvider extends React.Component {
       .then((response) => {
         console.log(response.body);
         // this.setState({ players: response.body.results });
+        console.log('STATE: ', this.state);
+        this.setState({ players: [...this.state.players, response.body] });
       })
       .catch(console.error);
   }
 
   handleDelete(payload) {
-    console.log(payload);
 
-
-    // console.log(payload.formData._id);
-    console.log('handleDelete');
     superagent
       .delete(`${API}/api/v1/players/${payload}`)
       .send(payload.formData)
