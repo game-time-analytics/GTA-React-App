@@ -1,8 +1,8 @@
 import React from 'react';
 
 /**
- * @description  AboutUs function that renders the software dev team and their names
- */
+* @description  AboutUs function that renders the software dev team and their names
+*/
 const AboutUs = () => {
   return (
       <React.Fragment>

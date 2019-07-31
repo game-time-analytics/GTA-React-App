@@ -3,6 +3,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import { PlayerContext } from '../context/playerContext';
 import MyForm from './form';
 
+
 /**
  * PlayerStats component
  * @description sets the state for the players states (passing, touchdowns, interceptions)
@@ -20,6 +21,27 @@ const PlayerStats = () => {
     setInterceptions(0);
     context.getPlayers();
   }, []);
+
+  const handlePassing = (e) => {
+    e.preventDefault();
+    const pYards = context.selectedPlayer.passing / 16;
+    const yardEstimate = pYards * e.target.value;
+    setPassing(yardEstimate);
+  };
+
+  const handleTouchdowns = (e) => {
+    e.preventDefault();
+    const tDowns = context.selectedPlayer.touchdowns / 16;
+    const touchDownEstimate = tDowns * e.target.value;
+    setTouchdowns(touchDownEstimate);
+  };
+
+  const handleInterceptions = (e) => {
+    e.preventDefault();
+    const interceptionsWeek = context.selectedPlayer.interceptions / 16;
+    const interceptionEstimate = interceptionsWeek * e.target.value;
+    setInterceptions(interceptionEstimate);
+  };
 
   /**
    * @method handlePassing
@@ -90,8 +112,7 @@ const PlayerStats = () => {
               name="interceptions"
               type="number"
               onChange={handleInterceptions}
-            />
-          
+            />   
       </React.Fragment>
   );
 };

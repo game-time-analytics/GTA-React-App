@@ -18,13 +18,12 @@ function Login() {
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
 
+/**
+* @param {Object} e 
+* @param {Function} loginMethodFromContext 
+* @description makes a call to the API and verifies username and password is correct.
+*/
 
-  /**
-   * @param {Object} e 
-   * @param {Function} loginMethodFromContext 
-   * @description makes a call to the API and verifies username and password is correct.
-   */
-  
   const handleSubmit = (e, loginMethodFromContext) => {
     e.preventDefault();
     superagent
