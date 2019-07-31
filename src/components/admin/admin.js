@@ -1,7 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { PlayerContext } from '../context/playerContext';
 import AdminForm from './form';
-// import AdminProvider from '../context/adminContext';
 
 /**
  * @description PlayerStats component search player by name to get their stats
@@ -9,45 +8,17 @@ import AdminForm from './form';
 
 const Admin = () => {
   const context = useContext(PlayerContext);
-  // const [passing, setPassing] = useState();
-  // const [touchdowns, setTouchdowns] = useState();
-  // const [interceptions, setInterceptions] = useState();
 
   useEffect(() => {
-    // setPassing(0);
-    // setTouchdowns(0);
-    // setInterceptions(0);
     context.getPlayers();
   }, []);
 
-
-  // const handlePassing = (e) => {
-  //   e.preventDefault();
-  //   const pYards = context.selectedPlayer.passing / 16;
-  //   const yardEstimate = pYards * e.target.value;
-  //   setPassing(yardEstimate);
-  // };
-
-  // const handleTouchdowns = (e) => {
-  //   e.preventDefault();
-  //   const tDowns = context.selectedPlayer.touchdowns / 16;
-  //   const touchDownEstimate = tDowns * e.target.value;
-  //   setTouchdowns(touchDownEstimate);
-  // };
-
-  // const handleInterceptions = (e) => {
-  //   e.preventDefault();
-  //   const interceptionsWeek = context.selectedPlayer.interceptions / 16;
-  //   const interceptionEstimate = interceptionsWeek * e.target.value;
-  //   setInterceptions(interceptionEstimate);
-  // };
 
   /**
    * render function that returns a simple hello world
    */
 
   return (
-    // <AdminProvider>
       <React.Fragment>
         <h1>Admin!</h1>
 
@@ -68,7 +39,6 @@ const Admin = () => {
           <h2>Yearly Interceptions{context.selectedPlayer.interceptions}</h2>
           <AdminForm />
       </React.Fragment>
-    // </AdminProvider>
   );
 };
 

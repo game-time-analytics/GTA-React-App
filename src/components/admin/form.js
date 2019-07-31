@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import Form from 'react-jsonschema-form';
 import { PlayerContext } from '../context/playerContext';
-// import { AdminContext } from '../context/adminContext';
 import playersSchema from './playersSchema';
 
 const uiSchema = {
@@ -15,7 +14,6 @@ const schemas = {
 
 const AdminForm = () => {
   const playerContext = useContext(PlayerContext);
-  // const adminContext = useContext(AdminContext);
 
   const handleSubmit = (form) => {
     const { formData } = form;
@@ -35,7 +33,6 @@ const AdminForm = () => {
         <Form
           schema={schemas.players}
           uiSchema={uiSchema}
-          // formData={this.props.records[this.props.model][playerContext.id]}
           formData={playerContext.selectedPlayer}
           onSubmit={handleSubmit}
         />
