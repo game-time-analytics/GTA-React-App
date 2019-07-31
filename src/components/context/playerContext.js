@@ -58,14 +58,23 @@ class PlayerProvider extends React.Component {
     console.log('handleput');
     // console.log(payload.record._id);
     console.log(payload.formData._id);
+    superagent
+      .put(`${API}/api/v1/players/${payload.formData._id}`)
+      .send(payload.formData)
+      .set('Authorization', `Bearer ${cookie}`)
+      .then((response) => {
+        console.log(response.body);
+        // this.setState({ players: response.body.results });
+      })
+      .catch(console.error);
   }
 
   handlePost(payload) {
     // console.log(payload);
-    console.log(document.cookie);
-    console.log(payload.formData);
+    // console.log(document.cookie);
+    // console.log(payload.formData);
     // console.log('handlpost');
-    console.log(cookie);
+    // console.log(cookie);
     // const obj = {
     //   name: payload.formData.name,
     //   description: payload.formData.description,
@@ -93,6 +102,15 @@ class PlayerProvider extends React.Component {
 
     // console.log(payload.formData._id);
     console.log('handleDelete');
+    superagent
+      .delete(`${API}/api/v1/players/${payload}`)
+      .send(payload.formData)
+      .set('Authorization', `Bearer ${cookie}`)
+      .then((response) => {
+        console.log(response.body);
+        // this.setState({ players: response.body.results });
+      })
+      .catch(console.error);
   }
 
   render() {
