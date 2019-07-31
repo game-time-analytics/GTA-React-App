@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react';
 import cookie from 'react-cookies';
 import jwt from 'jsonwebtoken';
@@ -6,26 +7,30 @@ export const LoginContext = React.createContext();
 
 const SECRET = process.env.REACT_APP_SECRET || 'changeit';
 
+/**
+ * @method setLoginState
+ * @param {String} token
+ * @description checks if provided token is valid, if so will set loggedIn to true if not it will set loggIn to false and returns a new state
+ */
+
 const setLoginState = (token) => {
   let loggedIn = false;
   let user = {};
   try {
-    // check token provided is good
     user = jwt.verify(token, SECRET);
-    // if so, flag user to loggedin
     loggedIn = true;
   } catch (e) {
-    // if bad token, flag to logged off and delete token
     loggedIn = false;
+    // eslint-disable-next-line no-param-reassign
     token = null;
   }
-  // return new state
   return { user, loggedIn, token };
 };
 
 /**
- * loginProvider class component
- * @description class that handles login and logout functionality
+ * LoginProvider class component
+ * @description handles the state of login and loutout
+ * @ignore
  */
 
 class LoginProvider extends React.Component {
@@ -38,9 +43,9 @@ class LoginProvider extends React.Component {
   }
 
   /**
-   * login function
+   * @method login
    * @param {string} loginToken
-   * @description if user logged in saves name and their token
+   * @description saves the login information and token in cookies and sets the user info and token inside state
    */
 
   login = (loginToken) => {
@@ -50,8 +55,8 @@ class LoginProvider extends React.Component {
   };
 
   /**
-   * logout function
-   * @description logs a user out
+   * @method logout
+   * @description removes the user info from cookies and set the user state to an empty object and flags loggedIn to false
    */
 
   logout = () => {
@@ -78,6 +83,7 @@ class LoginProvider extends React.Component {
   render() {
     return (
       <LoginContext.Provider value={this.state}>
+        {/* eslint-disable-next-line react/prop-types */}
         {this.props.children}
       </LoginContext.Provider>
     );
