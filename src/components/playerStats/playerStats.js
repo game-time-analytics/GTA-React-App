@@ -1,9 +1,28 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { PlayerContext } from '../context/playerContext';
+import MyForm from './form';
 
 /**
  * @description PlayerStats component search player by name to get their stats
  */
+// const MyForm = () => {
+//   const context = useContext(PlayerContext);
+//   // const [passing, setPassing] = useState();
+//   // const [touchdowns, setTouchdowns] = useState();
+//   // const [interceptions, setInterceptions] = useState();
+
+//   return (
+
+//           <form onSubmit={context.findPlayer}>
+//             <input
+//               placeholder="playerName"
+//               name="playerName"
+//               onChange={context.handleInputName}
+//             />
+//             <input type="submit" value="playerName" />
+//           </form>
+//   );
+// };
 
 const PlayerStats = () => {
   const context = useContext(PlayerContext);
@@ -47,14 +66,15 @@ const PlayerStats = () => {
       <React.Fragment>
         <h1>Playerstats!</h1>
 
-          <form onSubmit={context.findPlayer}>
+          {/* <form onSubmit={context.findPlayer}>
             <input
               placeholder="playerName"
               name="playerName"
               onChange={context.handleInputName}
             />
             <input type="submit" value="playerName" />
-          </form>
+          </form> */}
+          <MyForm/>
           {!!context.selectedPlayer.image && <img src={`${context.selectedPlayer.image}`}/>}
           <h2>{context.selectedPlayer.name}</h2>
           <h2>{context.selectedPlayer.description}</h2>

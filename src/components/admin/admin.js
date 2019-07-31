@@ -63,6 +63,14 @@ const Admin = () => {
           <h2>Yearly Touchdowns:{context.selectedPlayer.touchdowns}</h2>
           <h2>Yearly Interceptions{context.selectedPlayer.interceptions}</h2>
 
+          {/* <form onSubmit={context.findPlayer}>
+            <input
+              placeholder="playerName"
+              name="playerName"
+              onChange={context.handleInputName}
+            />
+            <input type="submit" value="playerName" />
+          </form> */}
           {/* <input
               placeholder="Passing Points"
               name="passing"
@@ -81,6 +89,54 @@ const Admin = () => {
               type="number"
               onChange={handleInterceptions}
             /> */}
+            {/* <form onSubmit={state.callAPI}>
+            <section>
+              <input
+                type="text"
+                className="wide"
+                name="url"
+                placeholder="URL"
+                value={state.url}
+                onChange={state.handleChange}
+              />
+
+              <div id="methods">
+                <label>
+                  <input
+                    type="radio"
+                    name="method"
+                    checked={state.method === 'post' ? true : false}
+                    value="post"
+                    onChange={state.handleChange}
+                  />
+                  <span>POST</span>
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    name="method"
+                    checked={state.method === 'put' ? true : false}
+                    value="put"
+                    onChange={state.handleChange}
+                  />
+                  <span>PUT</span>
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    name="method"
+                    checked={state.method === 'delete' ? true : false}
+                    value="delete"
+                    onChange={state.handleChange}
+                  />
+                  <span>DELETE</span>
+                </label>
+                <label>
+                  <button type="submit">Go!</button>
+                </label>
+              </div>
+            </section>
+            </form> */}
           
       </React.Fragment>
   );
