@@ -19,8 +19,13 @@ class AdminProvider extends React.Component {
     };
   }
 
-  
+  handlePut() {
+    console.log('handleput');
+  }
 
+  handlePost() {
+    console.log('handlpost');
+  }
 
   render() {
     return (

@@ -5,35 +5,22 @@
     "name": {
       "type": "string"
     },
-    "position": {
-      "type": "string",
-      "enum": [
-        "P",
-        "C",
-        "1B",
-        "2B",
-        "3B",
-        "SS",
-        "LF",
-        "RF",
-        "CF"
-      ]
+    "description": {
+      "type": "string"
     },
-    "throws": {
-      "type": "string",
-      "enum": [
-        "R",
-        "L"
-      ]
+    "passing": {
+      "type": "number"
     },
-    "bats": {
-      "type": "string",
-      "enum": [
-        "R",
-        "L"
-      ]
+    "touchdowns": {
+      "type": "number"
+    },
+    "interceptions": {
+      "type": "number"
     },
     "team": {
+      "type": "string"
+    },
+    "image": {
       "type": "string"
     },
     "_id": {
@@ -46,9 +33,10 @@
   },
   "required": [
     "name",
-    "position",
-    "throws",
-    "bats",
-    "team"
+    "passing",
+    "touchdowns",
+    "interceptions",
+    "team",
+    "image"
   ]
 }
