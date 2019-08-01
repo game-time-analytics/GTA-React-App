@@ -9,7 +9,8 @@ $linkFontSize: 170%;
 
 
 body {
-  background-color: whitesmoke;
+  // background-color: whitesmoke;
+  background-color: $highlightColor;
 }
 
 .container {
@@ -28,6 +29,7 @@ body {
 header {
   background-color: $secondaryColor;
   height: 90px;
+  padding: 2%;
  
   h1{
     font-size: 150%;
@@ -37,7 +39,8 @@ header {
     margin: 2%;
 
     a{
-      margin: 4%;
+      margin: 3%;
+      font-size: 110%;
     }
   }
 }
@@ -55,11 +58,19 @@ a:hover{
 #signin {
   float: left;
   margin: 20% 5%;
+  a{
+    font-size: 120%;
+    color: $secondaryColor;
+  }
 }
 
 #signup {
   float: right;
   margin: 20% 5%;
+  a{
+    font-size: 120%;
+    color: $secondaryColor;
+  }
 }
 
 img{
@@ -74,15 +85,50 @@ input{
   margin: 5%;
 }
 
-//Player stats
-h2{
-  margin-bottom: 2%;
+
+.adminPage{
+  h1{
+    color: $secondaryColor;
+  }
+  h2{
+    margin-bottom: 2%;
+    color: $secondaryColor;
+  }
+  form{
+    color: $secondaryColor;
+  }
 }
 
-// .calculation{
-//   float: right;
-// }
+//Player stats
+.playerStats{
+  margin: 2%;
+  h2{
+    margin-bottom: 2%;
+    color: $secondaryColor;
+  }
+  h1{
+    color: $secondaryColor;
+  }
+
+}
+
+.teamDescription {
+  color: $secondaryColor;
+  a{
+    color: $secondaryColor;
+    font-size: 100%;
+  }
+  
+}
 
 footer {
+  a{
+    color: $accentColor;
+    font-size: 100%;
+  }
   background-color: $secondaryColor;
+  margin: 2.5%;
+  padding: 2%;
+  
+
 }

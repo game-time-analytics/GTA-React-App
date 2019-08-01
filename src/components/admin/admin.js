@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { PlayerContext } from '../context/playerContext';
 import AdminForm from './form';
 import MyForm from '../selectPlayer/form';
@@ -21,8 +21,7 @@ const Admin = () => {
 
   return (
       <React.Fragment>
-        <h1>Admin!</h1>
-
+        <div className="adminPage">
           <MyForm />
           {!!context.selectedPlayer.image && <img src={`${context.selectedPlayer.image}`}/>}
           <h2>{context.selectedPlayer.name}</h2>
@@ -32,6 +31,7 @@ const Admin = () => {
           <h2>Yearly Touchdowns:{context.selectedPlayer.touchdowns}</h2>
           <h2>Yearly Interceptions{context.selectedPlayer.interceptions}</h2>
           <AdminForm />
+        </div>
       </React.Fragment>
   );
 };

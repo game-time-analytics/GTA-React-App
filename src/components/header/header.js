@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import Auth from '../auth/auth';
 import { LoginContext } from '../context/loginContext';
 import { PlayerContext } from '../context/playerContext';
-import './header.scss';
 
 const If = (props) => {
   return props.condition ? props.children : null;
