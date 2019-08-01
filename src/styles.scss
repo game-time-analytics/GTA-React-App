@@ -87,6 +87,11 @@ h2{
 
 .teamDescription {
   color: $secondaryColor;
+  a{
+    color: $secondaryColor;
+    font-size: 100%;
+  }
+  
 }
 
 footer {
