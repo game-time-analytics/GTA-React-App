@@ -2,6 +2,11 @@
 
 exports[`Footer snapshot test renders to DOM correctly 1`] = `
 <footer>
-  2019 GTA Online ©
+  <a
+    href="https://github.com/game-time-analytics"
+  >
+    GTA Online
+  </a>
+   2019 ©
 </footer>
 `;

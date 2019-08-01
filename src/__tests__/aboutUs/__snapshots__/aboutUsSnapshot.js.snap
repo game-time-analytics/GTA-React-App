@@ -1,7 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`About Us snapshot test renders to DOM correctly 1`] = `
-<h1>
-  About!
-</h1>
+Array [
+  <img
+    alt="GTA logo"
+    className="team"
+    src="GTA-team-image-final.jpg"
+  />,
+  <section
+    className="teamDescription"
+  >
+    <p>
+      <a
+        href="https://github.com/mwilkin"
+      >
+        Matt
+      </a>
+       is a long-time Patriots fan.
+    </p>
+    <p>
+      <a
+        href="https://github.com/TRose2014"
+      >
+        Tia 
+      </a>
+      is a die-hard Giants fan.
+    </p>
+    <p>
+      <a
+        href="https://github.com/JeffLawrence1"
+      >
+        Jeff 
+      </a>
+       is a Seahawks fan.
+    </p>
+  </section>,
+]
 `;
