@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import AboutUs from '../components/aboutUs/aboutUs';
+import AboutUs from '../../components/aboutUs/aboutUs';
 
 describe('About Us snapshot test', () => {
   it('renders to DOM correctly', () => {
