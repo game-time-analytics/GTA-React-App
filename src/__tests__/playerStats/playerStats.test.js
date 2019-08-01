@@ -19,6 +19,11 @@ describe('playerStats component', () => {
     const app = mount(<div></div>);
     expect(app.find('div').exists()).toBeTruthy();
   });
+
+  it('should render a input tag as expected', () => {
+    const app = mount(<input></input>);
+    expect(app.find('input').exists()).toBeTruthy();
+  });
 });
 
 
