@@ -62,6 +62,9 @@ function Signup() {
           </form>
         </div>
       </If>
+      <section>
+        <img src={ require('../../assets/Football-Analytics-Limitations.jpg') } alt="GTA logo" />
+      </section>
     </>
   );
 }

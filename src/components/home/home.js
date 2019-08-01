@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   return (
       <React.Fragment>
-        <h1>Home!</h1>
         <span id="signin">
             <Link to="/signin">Sign In!</Link>
           </span>
