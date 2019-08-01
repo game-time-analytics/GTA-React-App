@@ -8,10 +8,10 @@ const Home = () => {
   return (
       <React.Fragment>
         <h1>Home!</h1>
-        <span>
+        <span id="signin">
             <Link to="/signin">Sign In!</Link>
           </span>
-          <span>
+          <span id="signup">
             <Link to="/signup">Sign Up!</Link>
           </span>
         <img src={ require('../../assets/Football-Analytics-Limitations.jpg') } alt="GTA logo" />
