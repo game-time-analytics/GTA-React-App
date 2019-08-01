@@ -2,9 +2,6 @@
 
 exports[`Home snapshot test renders to DOM correctly 1`] = `
 Array [
-  <h1>
-    Home!
-  </h1>,
   <span
     id="signin"
   >
