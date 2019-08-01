@@ -60,7 +60,7 @@ const PlayerStats = () => {
       <React.Fragment>
         <h1>Playerstats!</h1>
           <MyForm/>
-          {!!context.selectedPlayer.image && <img src={`${context.selectedPlayer.image}`}/>}
+          {!!context.selectedPlayer.image && <img src={`${context.selectedPlayer.image}`} alt="player"/>}
           <h2>{context.selectedPlayer.name}</h2>
           <h2>{context.selectedPlayer.description}</h2>
 

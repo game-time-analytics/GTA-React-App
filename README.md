@@ -7,12 +7,12 @@ Tia Rose, Matt Wilkin, Jef Lawrence
 
 ### Links and Resources
 
-- [Heroku]()
+- [Heroku](https://game-time-analytics.herokuapp.com/)
 - [PR]()
 
 #### Documentation
 
-- [UML Data Flow]()
+- [UML Data Flow](https://www.lucidchart.com/documents/view/9a332944-6bf3-4c4d-b595-54c6632967d5/0)
 
 ## Modules
 
