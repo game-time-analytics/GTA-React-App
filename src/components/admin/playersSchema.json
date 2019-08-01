@@ -1,12 +1,13 @@
 {
-  "title": "players",
+  "title": "Players",
   "type": "object",
   "properties": {
     "name": {
       "type": "string"
     },
     "description": {
-      "type": "string"
+      "type": "string",
+      "title": "Description"
     },
     "passing": {
       "type": "number"
@@ -37,6 +38,7 @@
     "touchdowns",
     "interceptions",
     "team",
-    "image"
+    "image",
+    "description"
   ]
 }
