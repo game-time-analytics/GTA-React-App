@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 /**
  * @description Footer component that renders a basic footer with the app name and copyright info
  */
