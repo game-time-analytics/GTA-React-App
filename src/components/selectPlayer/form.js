@@ -7,11 +7,12 @@ const MyForm = () => {
   return (
           <form onSubmit={context.selectPlayer}>
             <input
+              className="formForm"
               placeholder="playerName"
               name="playerName"
               onChange={context.handleInputName}
             />
-            <input type="submit" value="Search Player" />
+            <input className="formButton" type="submit" value="Search Player" />
           </form>
   );
 };

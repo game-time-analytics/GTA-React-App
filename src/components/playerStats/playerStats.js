@@ -79,18 +79,21 @@ const PlayerStats = () => {
 
             <h1>Total: {passing + touchdowns + interceptions}</h1>
             <input
+              className="statInput"
               placeholder="Passing Points"
               name="passing"
               type="number"
               onChange={handlePassing}
             />
             <input
+              className="statInput"
               placeholder="Touchdown Points"
               name="touchdowns"
               type="number"
               onChange={handleTouchdowns}
             />
             <input
+              className="statInput"
               placeholder="Interception Points"
               name="interceptions"
               type="number"

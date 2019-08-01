@@ -28,14 +28,16 @@ const AdminForm = () => {
 
   return (
       <div>
-        <button onClick={playerContext.resetSelected}>Reset</button>
-        <button onClick={() => playerContext.handleDelete(playerContext.id)}>Delete Player</button>
-        <Form
-          schema={schemas.players}
-          uiSchema={uiSchema}
-          formData={playerContext.selectedPlayer}
-          onSubmit={handleSubmit}
-        />
+        <button className="adminButton" onClick={playerContext.resetSelected}>Reset</button>
+        <button className="adminButton" onClick={() => playerContext.handleDelete(playerContext.id)}>Delete Player</button>
+        <section className="dynamicForm">
+          <Form
+            schema={schemas.players}
+            uiSchema={uiSchema}
+            formData={playerContext.selectedPlayer}
+            onSubmit={handleSubmit}
+          />
+        </section>
       </div>
   );
 };
