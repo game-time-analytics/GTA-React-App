@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Home from '../components/home/home';
+import Home from '../../components/home/home';
 
 describe('Home snapshot test', () => {
   it('renders to DOM correctly', () => {
