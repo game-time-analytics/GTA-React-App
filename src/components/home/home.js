@@ -7,10 +7,10 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   return (
       <React.Fragment>
-        <span>
+        <span id="signin">
             <Link to="/signin">Sign In!</Link>
           </span>
-          <span>
+          <span id="signup">
             <Link to="/signup">Sign Up!</Link>
           </span>
         <img src={ require('../../assets/Football-Analytics-Limitations.jpg') } alt="GTA logo" />
