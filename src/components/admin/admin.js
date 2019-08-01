@@ -31,7 +31,7 @@ const Admin = () => {
             />
             <input type="submit" value="playerName" />
           </form>
-          {!!context.selectedPlayer.image && <img src={`${context.selectedPlayer.image}`}/>}
+          {!!context.selectedPlayer.image && <img src={`${context.selectedPlayer.image}`} alt="selected player"/>}
           <h2>{context.selectedPlayer.name}</h2>
           <h2>{context.selectedPlayer._id}</h2>
           <h2>{context.selectedPlayer.description}</h2>
