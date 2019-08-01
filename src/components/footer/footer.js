@@ -1,5 +1,4 @@
 import React from 'react';
-import './footer.scss';
 
 /**
  * @description Footer component that renders a basic footer with the app name and copyright info
