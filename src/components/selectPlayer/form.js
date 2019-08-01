@@ -11,7 +11,7 @@ const MyForm = () => {
               name="playerName"
               onChange={context.handleInputName}
             />
-            <input type="submit" value="playerName" />
+            <input type="submit" value="Search Player" />
           </form>
   );
 };

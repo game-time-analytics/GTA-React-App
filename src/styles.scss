@@ -121,6 +121,15 @@ input{
   
 }
 
+#root_description {
+  width: 25%;
+  height: 70px;
+}
+
+.form-group{
+  margin-bottom: -2%;
+}
+
 footer {
   a{
     color: $accentColor;
