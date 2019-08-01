@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+
 import React from 'react';
 import superagent from 'superagent';
 
@@ -6,6 +8,10 @@ export const PlayerContext = React.createContext();
 const API = process.env.REACT_APP_API;
 
 const cookie = document.cookie.substring(5);
+
+/**
+ * @description Player Provider class component that sets the initial state
+ */
 
 class PlayerProvider extends React.Component {
   constructor(props) {
@@ -26,6 +32,10 @@ class PlayerProvider extends React.Component {
     };
   }
 
+  /**
+   * @method getPlayers
+   * @description makes a call to the API and sets the state of the players array to have the results passed from the body
+   */
   getPlayers = () => {
     superagent
       .get(`${API}/api/v1/players`)
@@ -35,6 +45,12 @@ class PlayerProvider extends React.Component {
       .catch(console.error);
   }
 
+  /**
+  * @method selectPlayer
+  * @param {Object} e
+  * @description finds the player in the player array located in state. If player name passed in from the event matches the player in array, that player will be the selectedPlayer
+  */
+  
   selectPlayer = (e) => {
     e.preventDefault();
     this.state.players.forEach((player) => {
@@ -44,10 +60,20 @@ class PlayerProvider extends React.Component {
     });
   }
 
+  /**
+   * @method handleInputName
+   * @param {Object} e
+   * @description sets the state of selected name to the value of what the user types into the inputfield
+   */
+  
   handleInputName = (e) => {
     this.setState({ selectedName: e.target.value });
   };
 
+  /**
+   * @method resetSelected
+   * @description sets the state of selected player to an empty string
+   */
   resetSelected = () => {
     this.setState({ selectedPlayer: [], id: '' });
   }
@@ -100,3 +126,4 @@ class PlayerProvider extends React.Component {
 }
 
 export default PlayerProvider;
+

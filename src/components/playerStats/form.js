@@ -8,7 +8,6 @@ const MyForm = () => {
   // const [interceptions, setInterceptions] = useState();
 
   return (
-
           <form onSubmit={context.selectPlayer}>
             <input
               placeholder="playerName"
