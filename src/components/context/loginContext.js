@@ -21,8 +21,6 @@ const setLoginState = (token) => {
     loggedIn = true;
   } catch (e) {
     loggedIn = false;
-    // eslint-disable-next-line no-param-reassign
-    token = null;
   }
   return { user, loggedIn, token };
 };

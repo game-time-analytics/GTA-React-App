@@ -3,12 +3,10 @@ import React, { useState, useContext, useEffect } from 'react';
 import { PlayerContext } from '../context/playerContext';
 import MyForm from './form';
 
-
 /**
  * PlayerStats component
  * @description sets the state for the players states (passing, touchdowns, interceptions)
  */
-
 const PlayerStats = () => {
   const context = useContext(PlayerContext);
   const [passing, setPassing] = useState();
@@ -22,33 +20,11 @@ const PlayerStats = () => {
     context.getPlayers();
   }, []);
 
-  const handlePassing = (e) => {
-    e.preventDefault();
-    const pYards = context.selectedPlayer.passing / 16;
-    const yardEstimate = pYards * e.target.value;
-    setPassing(yardEstimate);
-  };
-
-  const handleTouchdowns = (e) => {
-    e.preventDefault();
-    const tDowns = context.selectedPlayer.touchdowns / 16;
-    const touchDownEstimate = tDowns * e.target.value;
-    setTouchdowns(touchDownEstimate);
-  };
-
-  const handleInterceptions = (e) => {
-    e.preventDefault();
-    const interceptionsWeek = context.selectedPlayer.interceptions / 16;
-    const interceptionEstimate = interceptionsWeek * e.target.value;
-    setInterceptions(interceptionEstimate);
-  };
-
   /**
-   * @method handlePassing
-   * @param {Object} e
-   * @description calculates passing yards for the player the user selected and divides it by 16 and passes that calucation into setPassing
-   */
-
+  * @method handlePassing
+  * @param {Object} e
+  * @description calculates passing yards for the player the user selected and divides it by 16 and passes that calucation into setPassing
+  */
   const handlePassing = (e) => {
     e.preventDefault();
     const pYards = context.selectedPlayer.passing / 16;
@@ -57,10 +33,10 @@ const PlayerStats = () => {
   };
 
   /**
-   * @method handleTouchdowns
-   * @param {Object} e 
-    * @description calculates touchdowns for the player the user selected and divides it by 16 and passes that calucation into setTouchdowns
-   */
+  * @method handleTouchdowns
+  * @param {Object} e 
+  * @description calculates touchdowns for the player the user selected and divides it by 16 and passes that calucation into setTouchdowns
+  */
   const handleTouchdowns = (e) => {
     e.preventDefault();
     const tDowns = context.selectedPlayer.touchdowns / 16;
@@ -69,11 +45,10 @@ const PlayerStats = () => {
   };
 
   /**
-   * @method handleInterceptions
-   * @param {Object} e 
-    * @description calculates interceptions for the player the user selected and divides it by 16 and passes that calucation into setInterceptions
-   */
-
+  * @method handleInterceptions
+  * @param {Object} e 
+  * @description calculates interceptions for the player the user selected and divides it by 16 and passes that calucation into setInterceptions
+  */
   const handleInterceptions = (e) => {
     e.preventDefault();
     const interceptionsWeek = context.selectedPlayer.interceptions / 16;
@@ -84,6 +59,15 @@ const PlayerStats = () => {
   return (
       <React.Fragment>
         <h1>Playerstats!</h1>
+
+          {/* <form onSubmit={context.findPlayer}>
+            <input
+              placeholder="playerName"
+              name="playerName"
+              onChange={context.handleInputName}
+            />
+            <input type="submit" value="playerName" />
+          </form> */}
           <MyForm/>
           {!!context.selectedPlayer.image && <img src={`${context.selectedPlayer.image}`}/>}
           <h2>{context.selectedPlayer.name}</h2>
@@ -112,7 +96,8 @@ const PlayerStats = () => {
               name="interceptions"
               type="number"
               onChange={handleInterceptions}
-            />   
+            />
+          
       </React.Fragment>
   );
 };
