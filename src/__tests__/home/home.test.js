@@ -27,4 +27,4 @@ describe('home component', () => {
 // expect(wrapper.text()).to.equal('bar');
 // wrapper.setContext({ name: 'baz' });
 // expect(wrapper.text()).to.equal('baz');
-});
+
