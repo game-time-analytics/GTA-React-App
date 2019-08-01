@@ -33,11 +33,11 @@ const Header = () => {
             </span>
           </Auth>
           <span>
-            <Link to="/aboutUs">About Us</Link>
+            <Link to="/aboutUs">About</Link>
           </span>
           <span>
           <If condition={context.loggedIn}>
-            <Link to="/" onClick={() => { context.logout(); playerContext.resetSelected(); } }>Log Out</Link>
+            <Link to="/" onClick={() => { context.logout(); playerContext.resetSelected(); } }>Logout</Link>
           </If>
           </span>
       </nav>
