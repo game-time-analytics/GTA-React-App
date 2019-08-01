@@ -27,6 +27,7 @@
     "react-router-dom": "5.0.1",
     "react-scripts": "3.0.1",
     "react-styleguidist": "9.1.13",
+    "react-test-renderer": "^16.8.6",
     "superagent": "5.1.0",
     "superagent-mock": "^3.7.0"
   },
