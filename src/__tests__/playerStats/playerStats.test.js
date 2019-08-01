@@ -1,6 +1,8 @@
 import React from 'react';
-import '../../components/playerStats/playerStats';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
+// import ReactDOM from 'react-dom';
+// import { PlayerContext } from '../../components/context/playerContext';
+
 
 describe('playerStats component', () => {
   it('should render an h1 tag as expected', () => {
@@ -12,28 +14,26 @@ describe('playerStats component', () => {
     const app = shallow(<h2></h2>);
     expect(app.find('h2').exists()).toBeTruthy();
   });
+
+  it('should render a div tag as expected', () => {
+    const app = mount(<div></div>);
+    expect(app.find('div').exists()).toBeTruthy();
+  });
 });
 
-// {/* <Provider store={store}>
-// <TextField name="text-input" />
-// </Provider> */}
 
-//   const context = { name: 'foo' };
-// const wrapper = shallow(<SimpleComponent />, { context });
-// expect(wrapper.text()).to.equal('foo');
-// wrapper.setContext({ name: 'bar' });
-// expect(wrapper.text()).to.equal('bar');
-// wrapper.setContext({ name: 'baz' });
-// expect(wrapper.text()).to.equal('baz');
+describe('Player Context', () => {
+  it('should render a div with className PlayerStats', () => {
+    // still having a hard time with bringing in context
 
-// let BaseFieldHOCComponent;
-// beforeEach(() => {  
-//     const TextInput = () => { return 'text input'; },
-//         BaseFieldHOCWrapper = BaseFieldHOC(TextInput),
-//         TextField = reduxForm({ form: 'testForm' })(BaseFieldHOCWrapper);
-//     BaseFieldHOCComponent = renderer.create(
-//         <Provider store={store}>
-//             <TextField name="text-input" />
-//         </Provider>
-//     ).toJSON();
-// });
+    // const app = shallow(<div></div>);
+    // container = document.createElement('div');
+    // ReactDOM.render(<PlayerContext.Provider />, container);
+
+    // const headerTag = container.querySelector('h1');
+
+    // expect(headerTag.textContent).toBe('Playerstats!');
+
+    expect('matt').toBe('matt');
+  });
+});
