@@ -33,6 +33,7 @@ function Signup() {
         const token = response.text;
         loginMethodFromContext(token);
       })
+      // eslint-disable-next-line no-console
       .catch(console.error);
   };
   return (
