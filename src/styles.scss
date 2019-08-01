@@ -85,6 +85,20 @@ input{
   margin: 5%;
 }
 
+
+.adminPage{
+  h1{
+    color: $secondaryColor;
+  }
+  h2{
+    margin-bottom: 2%;
+    color: $secondaryColor;
+  }
+  form{
+    color: $secondaryColor;
+  }
+}
+
 //Player stats
 .playerStats{
   margin: 2%;

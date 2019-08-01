@@ -20,17 +20,17 @@ const Admin = () => {
 
   return (
       <React.Fragment>
-        <h1>Admin!</h1>
-
-          <form onSubmit={context.selectPlayer}>
-            <input
-              placeholder="playerName"
-              name="playerName"
-              onChange={context.handleInputName}
-              value={context.selectedName}
-            />
-            <input type="submit" value="playerName" />
-          </form>
+        <div className="adminPage">
+          <h1>Admin!</h1>
+            <form onSubmit={context.selectPlayer}>
+              <input
+                placeholder="playerName"
+                name="playerName"
+                onChange={context.handleInputName}
+                value={context.selectedName}
+              />
+              <input type="submit" value="playerName" />
+            </form>
           {!!context.selectedPlayer.image && <img src={`${context.selectedPlayer.image}`} alt="selected player"/>}
           <h2>{context.selectedPlayer.name}</h2>
           <h2>{context.selectedPlayer._id}</h2>
@@ -39,6 +39,7 @@ const Admin = () => {
           <h2>Yearly Touchdowns:{context.selectedPlayer.touchdowns}</h2>
           <h2>Yearly Interceptions{context.selectedPlayer.interceptions}</h2>
           <AdminForm />
+        </div>
       </React.Fragment>
   );
 };

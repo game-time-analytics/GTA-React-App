@@ -27,7 +27,6 @@ const AdminForm = () => {
 
   return (
       <div>
-        <h3>Edit Record {playerContext.id}</h3>
         <button onClick={playerContext.resetSelected}>Reset</button>
         <button onClick={() => playerContext.handleDelete(playerContext.id)}>Delete Player</button>
         <Form
