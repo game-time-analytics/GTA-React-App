@@ -30,7 +30,7 @@ describe('signin component', () => {
     // expect(app.find('form').exists()).toBeTruthy();
   });
 
-  it('should render an input if not logged in', ()=>{
+  it('should render an input if not logged in', () => {
 
   });
 });
