@@ -9,7 +9,8 @@ $linkFontSize: 170%;
 
 
 body {
-  background-color: whitesmoke;
+  // background-color: whitesmoke;
+  background-color: $highlightColor;
 }
 
 .container {
@@ -28,9 +29,10 @@ body {
 header {
   background-color: $secondaryColor;
   height: 90px;
+  padding: 2%;
  
   h1{
-    font-size: 150%;
+    font-size: 175%;
   }
 
   nav{
@@ -83,6 +85,14 @@ h2{
 //   float: right;
 // }
 
+.teamDescription {
+  color: $secondaryColor;
+}
+
 footer {
   background-color: $secondaryColor;
+  
+  margin: 2.5%;
+  padding: 2%;
+
 }

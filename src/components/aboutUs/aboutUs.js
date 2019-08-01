@@ -6,7 +6,12 @@ import React from 'react';
 const AboutUs = () => {
   return (
       <React.Fragment>
-        <h1>About!</h1>
+        <img className="team" src={ require('../../assets/GTA-team-image-final.jpg') } alt="GTA logo" />
+        <section className="teamDescription">
+          <p>Matt's favorite team is the Patriots.</p>
+          <p>Tia is a die-hard Giants fan.</p>
+          <p>Jeff is a Seahawks fan.</p>
+        </section>
       </React.Fragment>
   );
 };
