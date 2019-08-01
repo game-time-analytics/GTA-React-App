@@ -1,6 +1,7 @@
 import superagent from 'superagent';
 import React, { useState, useContext } from 'react';
 import { LoginContext } from '../context/loginContext';
+import {Link} from 'react-router-dom';
 
 const API = process.env.REACT_APP_API;
 
@@ -52,10 +53,13 @@ function Login() {
               type="password"
               onChange={e => setPassword(e.target.value)}
             />
-            <input type="submit" value="login" />
+            <input type="submit" value="Login" />
           </form>
         </div>
       </If>
+      <section>
+        <img src={ require('../../assets/Football-Analytics-Limitations.jpg') } alt="GTA logo" />
+      </section>
     </>
   );
 }

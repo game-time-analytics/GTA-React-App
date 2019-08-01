@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import React, { useState, useContext, useEffect } from 'react';
 import { PlayerContext } from '../context/playerContext';
-import MyForm from './form';
+import MyForm from '../selectPlayer/form';
 
 /**
  * PlayerStats component
@@ -59,15 +59,6 @@ const PlayerStats = () => {
   return (
       <React.Fragment>
         <h1>Playerstats!</h1>
-
-          {/* <form onSubmit={context.findPlayer}>
-            <input
-              placeholder="playerName"
-              name="playerName"
-              onChange={context.handleInputName}
-            />
-            <input type="submit" value="playerName" />
-          </form> */}
           <MyForm/>
           {!!context.selectedPlayer.image && <img src={`${context.selectedPlayer.image}`}/>}
           <h2>{context.selectedPlayer.name}</h2>
