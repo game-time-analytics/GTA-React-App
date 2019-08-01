@@ -1,7 +1,6 @@
 import superagent from 'superagent';
 import React, { useState, useContext } from 'react';
 import { LoginContext } from '../context/loginContext';
-import {Link} from 'react-router-dom';
 
 const API = process.env.REACT_APP_API;
 
