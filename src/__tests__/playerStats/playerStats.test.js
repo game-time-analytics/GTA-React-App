@@ -3,15 +3,20 @@ import '../../components/playerStats/playerStats';
 import { shallow } from 'enzyme';
 
 describe('playerStats component', () => {
-  it('should render as expected', () => {
+  it('should render an h1 tag as expected', () => {
     const app = shallow(<h1></h1>);
     expect(app.find('h1').exists()).toBeTruthy();
   });
+
+  it('should render an h2 tag as expected', () => {
+    const app = shallow(<h2></h2>);
+    expect(app.find('h2').exists()).toBeTruthy();
+  });
 });
 
-{/* <Provider store={store}>
-<TextField name="text-input" />
-</Provider> */}
+// {/* <Provider store={store}>
+// <TextField name="text-input" />
+// </Provider> */}
 
 //   const context = { name: 'foo' };
 // const wrapper = shallow(<SimpleComponent />, { context });
@@ -32,4 +37,3 @@ describe('playerStats component', () => {
 //         </Provider>
 //     ).toJSON();
 // });
-
