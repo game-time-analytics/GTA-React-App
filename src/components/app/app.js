@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
+import Auth from '../auth/auth';
 import Header from '../header/header';
 import Footer from '../footer/footer';
 import Admin from '../admin/admin';
@@ -21,8 +22,12 @@ class App extends React.Component {
       <div>
         <Header />
         <Route exact path="/" component={Home} />
-        <Route path="/playerStats" component={PlayerStats} />
-        <Route path="/admin" component={Admin} />
+        <Auth capability="read">
+          <Route path="/playerStats" component={PlayerStats} />
+        </Auth>
+        <Auth capability="superuser">
+          <Route path="/admin" component={Admin} />
+        </Auth>
         <Route path="/aboutUs" component={AboutUs} />
         <Route path="/signin" component={Signin} />
         <Route path="/signup" component={Signup} />
