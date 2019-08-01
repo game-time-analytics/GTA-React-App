@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import { PlayerContext } from '../context/playerContext';
 import AdminForm from './form';
+import MyForm from '../selectPlayer/form';
 
 /**
  * @description PlayerStats component search player by name to get their stats
@@ -21,17 +22,8 @@ const Admin = () => {
   return (
       <React.Fragment>
         <div className="adminPage">
-          <h1>Admin!</h1>
-            <form onSubmit={context.selectPlayer}>
-              <input
-                placeholder="playerName"
-                name="playerName"
-                onChange={context.handleInputName}
-                value={context.selectedName}
-              />
-              <input type="submit" value="playerName" />
-            </form>
-          {!!context.selectedPlayer.image && <img src={`${context.selectedPlayer.image}`} alt="selected player"/>}
+          <MyForm />
+          {!!context.selectedPlayer.image && <img src={`${context.selectedPlayer.image}`}/>}
           <h2>{context.selectedPlayer.name}</h2>
           <h2>{context.selectedPlayer._id}</h2>
           <h2>{context.selectedPlayer.description}</h2>

@@ -52,10 +52,13 @@ function Login() {
               type="password"
               onChange={e => setPassword(e.target.value)}
             />
-            <input type="submit" value="login" />
+            <input type="submit" value="Login" />
           </form>
         </div>
       </If>
+      <section>
+        <img src={ require('../../assets/Football-Analytics-Limitations.jpg') } alt="GTA logo" />
+      </section>
     </>
   );
 }

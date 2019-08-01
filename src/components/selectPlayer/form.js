@@ -3,9 +3,6 @@ import { PlayerContext } from '../context/playerContext';
 
 const MyForm = () => {
   const context = useContext(PlayerContext);
-  // const [passing, setPassing] = useState();
-  // const [touchdowns, setTouchdowns] = useState();
-  // const [interceptions, setInterceptions] = useState();
 
   return (
           <form onSubmit={context.selectPlayer}>

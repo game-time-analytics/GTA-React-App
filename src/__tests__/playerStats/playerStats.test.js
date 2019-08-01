@@ -1,5 +1,5 @@
 import React from 'react';
-import '../components/playerStats/playerStats';
+import '../../components/playerStats/playerStats';
 import { shallow } from 'enzyme';
 
 describe('playerStats component', () => {

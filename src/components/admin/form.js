@@ -6,6 +6,7 @@ import playersSchema from './playersSchema';
 const uiSchema = {
   _id: { 'ui:widget': 'hidden' },
   __v: { 'ui:widget': 'hidden' },
+  description: { 'ui:widget': 'textarea' },
 };
 
 const schemas = {

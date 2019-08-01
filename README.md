@@ -3,7 +3,7 @@
 GTA - Online React 
 
 ### Author: Student/Group Name
-Tia Rose, Matt Wilkin, Jef Lawrence
+Tia Rose, Matt Wilkin, Jeff Lawrence
 
 ### Links and Resources
 
