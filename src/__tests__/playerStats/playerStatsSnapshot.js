@@ -1,6 +1,6 @@
 // import React from 'react';
 // import renderer from 'react-test-renderer';
-// import PlayerStats from '../components/playerStats/playerStats';
+// import PlayerStats from '../../components/playerStats/playerStats';
 
 describe('PlayerStats snapshot test', () => {
   it('renders to DOM correctly', () => {
