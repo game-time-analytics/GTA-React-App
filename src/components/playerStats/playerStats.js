@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import React, { useState, useContext, useEffect } from 'react';
 import { PlayerContext } from '../context/playerContext';
-import MyForm from './form';
+import MyForm from '../selectPlayer/form';
 
 /**
  * PlayerStats component
