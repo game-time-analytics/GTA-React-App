@@ -1,6 +1,6 @@
 // import React from 'react';
 // import renderer from 'react-test-renderer';
-// import Header from '../components/header/header';
+// import Header from '../../components/header/header';
 
 describe('Header snapshot test', () => {
   it('renders to DOM correctly', () => {

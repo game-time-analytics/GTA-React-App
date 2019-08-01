@@ -1,6 +1,6 @@
 // import React from 'react';
 // import renderer from 'react-test-renderer';
-// import Admin from '../components/admin/admin';
+// import Admin from '../../components/admin/admin';
 
 describe('Admin snapshot test', () => {
   it('renders to DOM correctly', () => {
