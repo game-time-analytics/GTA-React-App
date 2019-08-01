@@ -90,9 +90,13 @@ h2{
 }
 
 footer {
+  a{
+    color: $accentColor;
+    font-size: 100%;
+  }
   background-color: $secondaryColor;
-  
   margin: 2.5%;
   padding: 2%;
+  
 
 }
