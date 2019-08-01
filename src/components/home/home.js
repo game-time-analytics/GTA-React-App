@@ -7,7 +7,6 @@ import { Link, BrowserRouter } from 'react-router-dom';
 const Home = () => {
   return (
       <React.Fragment>      
-        <BrowserRouter>
           <span id="signin">
             <Link to="/signin">Sign In!</Link>
           </span>
@@ -15,7 +14,6 @@ const Home = () => {
             <Link to="/signup">Sign Up!</Link>
           </span>
           <img src={ require('../../assets/Football-Analytics-Limitations.jpg') } alt="GTA logo" />
-        </BrowserRouter>
       </React.Fragment>
   );
 };
