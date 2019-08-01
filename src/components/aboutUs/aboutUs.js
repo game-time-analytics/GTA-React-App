@@ -8,7 +8,7 @@ const AboutUs = () => {
       <React.Fragment>
         <img className="team" src={ require('../../assets/GTA-team-image-final.jpg') } alt="GTA logo" />
         <section className="teamDescription">
-          <p>Matt's favorite team is the Patriots.</p>
+          <p>Matt is a long-time Patriots fan.</p>
           <p>Tia is a die-hard Giants fan.</p>
           <p>Jeff is a Seahawks fan.</p>
         </section>
