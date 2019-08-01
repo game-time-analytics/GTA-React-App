@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-console */
 /* eslint-disable max-len */
 
 import React from 'react';
@@ -104,7 +106,7 @@ class PlayerProvider extends React.Component {
     superagent
       .delete(`${API}/api/v1/players/${id}`)
       .set('Authorization', `Bearer ${cookie}`)
-      .then((response) => {
+      .then(() => {
         const playersList = this.state.players.filter(player => player._id !== id);
         this.setState({ 
           players: playersList, 
@@ -126,4 +128,3 @@ class PlayerProvider extends React.Component {
 }
 
 export default PlayerProvider;
-
