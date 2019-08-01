@@ -32,14 +32,15 @@ header {
   padding: 2%;
  
   h1{
-    font-size: 175%;
+    font-size: 150%;
   }
 
   nav{
     margin: 2%;
 
     a{
-      margin: 4%;
+      margin: 3%;
+      font-size: 110%;
     }
   }
 }
@@ -85,8 +86,16 @@ input{
 }
 
 //Player stats
-h2{
-  margin-bottom: 2%;
+.playerStats{
+  margin: 2%;
+  h2{
+    margin-bottom: 2%;
+    color: $secondaryColor;
+  }
+  h1{
+    color: $secondaryColor;
+  }
+
 }
 
 .teamDescription {

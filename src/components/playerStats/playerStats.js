@@ -58,26 +58,27 @@ const PlayerStats = () => {
 
   return (
       <React.Fragment>
-        <h1>Playerstats!</h1>
-          <MyForm/>
-          {!!context.selectedPlayer.image && <img src={`${context.selectedPlayer.image}`} alt="player"/>}
-          <h2>{context.selectedPlayer.name}</h2>
-          <h2>{context.selectedPlayer.description}</h2>
+        <div className="playerStats">
+          <h1>Playerstats!</h1>
+            <MyForm/>
+            {!!context.selectedPlayer.image && <img src={`${context.selectedPlayer.image}`} alt="player"/>}
+            <h2>{context.selectedPlayer.name}</h2>
+            <h2>{context.selectedPlayer.description}</h2>
 
-          <div className="pastStats">
-            <h2>Yearly Passing Yards:{context.selectedPlayer.passing}</h2>
-            <h2>Yearly Touchdowns:{context.selectedPlayer.touchdowns}</h2>
-            <h2>Yearly Interceptions{context.selectedPlayer.interceptions}</h2>
-          </div>
-          
-          <div className="calculations">
-            <h2>Calculated Passing Points Per Week:{passing}</h2>
-            <h2>Calculated Touchdown Points Per Week:{touchdowns}</h2>
-            <h2>Calculated Interception Points Per Week:{interceptions}</h2>
-          </div>
+            <div className="pastStats">
+              <h2>Yearly Passing Yards:{context.selectedPlayer.passing}</h2>
+              <h2>Yearly Touchdowns:{context.selectedPlayer.touchdowns}</h2>
+              <h2>Yearly Interceptions{context.selectedPlayer.interceptions}</h2>
+            </div>
+            
+            <div className="calculations">
+              <h2>Calculated Passing Points Per Week:{passing}</h2>
+              <h2>Calculated Touchdown Points Per Week:{touchdowns}</h2>
+              <h2>Calculated Interception Points Per Week:{interceptions}</h2>
+            </div>
 
-          <h1>Total: {passing + touchdowns + interceptions}</h1>
-          <input
+            <h1>Total: {passing + touchdowns + interceptions}</h1>
+            <input
               placeholder="Passing Points"
               name="passing"
               type="number"
@@ -95,7 +96,7 @@ const PlayerStats = () => {
               type="number"
               onChange={handleInterceptions}
             />
-          
+        </div>
       </React.Fragment>
   );
 };
