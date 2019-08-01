@@ -1,0 +1,44 @@
+{
+  "title": "Players",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string",
+      "title": "Description"
+    },
+    "passing": {
+      "type": "number"
+    },
+    "touchdowns": {
+      "type": "number"
+    },
+    "interceptions": {
+      "type": "number"
+    },
+    "team": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "_id": {
+      "type": "string",
+      "pattern": "^[0-9a-fA-F]{24}$"
+    },
+    "__v": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "name",
+    "passing",
+    "touchdowns",
+    "interceptions",
+    "team",
+    "image",
+    "description"
+  ]
+}

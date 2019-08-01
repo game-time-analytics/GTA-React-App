@@ -33,6 +33,7 @@ function Signup() {
         const token = response.text;
         loginMethodFromContext(token);
       })
+      // eslint-disable-next-line no-console
       .catch(console.error);
   };
   return (
@@ -61,6 +62,9 @@ function Signup() {
           </form>
         </div>
       </If>
+      <section>
+        <img src={ require('../../assets/Football-Analytics-Limitations.jpg') } alt="GTA logo" />
+      </section>
     </>
   );
 }

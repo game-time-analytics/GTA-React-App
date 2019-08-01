@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer snapshot test renders to DOM correctly 1`] = `
+<footer>
+  <a
+    href="https://github.com/game-time-analytics"
+  >
+    GTA Online
+  </a>
+   2019 ©
+</footer>
+`;

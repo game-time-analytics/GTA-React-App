@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home snapshot test renders to DOM correctly 1`] = `
+Array [
+  <span
+    id="signin"
+  >
+    <a
+      href="/signin"
+      onClick={[Function]}
+    >
+      Sign In!
+    </a>
+  </span>,
+  <span
+    id="signup"
+  >
+    <a
+      href="/signup"
+      onClick={[Function]}
+    >
+      Sign Up!
+    </a>
+  </span>,
+  <img
+    alt="GTA logo"
+    src="Football-Analytics-Limitations.jpg"
+  />,
+]
+`;

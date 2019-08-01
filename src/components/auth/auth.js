@@ -18,6 +18,7 @@ const Auth = (props) => {
   && (props.capability ? context.user.capabilities 
     && context.user.capabilities.includes(props.capability) : true);
 
+  // eslint-disable-next-line react/prop-types
   return <If condition={okToRender}>{props.children}</If>;
 };
 

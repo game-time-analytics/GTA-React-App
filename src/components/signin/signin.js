@@ -10,13 +10,19 @@ const If = (props) => {
 };
 
 /**
- * @description Login component logs a user by utilizing context to add their information and provide them a token
+ * @description Login component that gets their username and password and provides them a token
  */
 
 function Login() {
   const context = useContext(LoginContext);
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
+
+  /**
+* @param {Object} e 
+* @param {Function} loginMethodFromContext 
+* @description makes a call to the API and verifies username and password is correct.
+*/
 
   const handleSubmit = (e, loginMethodFromContext) => {
     e.preventDefault();
@@ -27,6 +33,7 @@ function Login() {
         const token = response.text;
         loginMethodFromContext(token);
       })
+      // eslint-disable-next-line no-console
       .catch(console.error);
   };
   return (
@@ -45,10 +52,13 @@ function Login() {
               type="password"
               onChange={e => setPassword(e.target.value)}
             />
-            <input type="submit" value="login" />
+            <input type="submit" value="Login" />
           </form>
         </div>
       </If>
+      <section>
+        <img src={ require('../../assets/Football-Analytics-Limitations.jpg') } alt="GTA logo" />
+      </section>
     </>
   );
 }

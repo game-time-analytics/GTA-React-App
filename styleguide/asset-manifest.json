@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cf338596.chunk.css",
+    "main.js": "/build/main.c2dbf99c.js",
+    "runtime~main.js": "/build/bundle.feb19782.js",
+    "build/2.f06db6f4.js": "/build/2.f06db6f4.js",
+    "index.html": "/index.html",
+    "precache-manifest.356836166474064644a2f3efb8d3bd37.js": "/precache-manifest.356836166474064644a2f3efb8d3bd37.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.cf338596.chunk.css.map": "/static/css/main.cf338596.chunk.css.map",
+    "static/media/Football-Analytics-Limitations.jpg": "/static/media/Football-Analytics-Limitations.bc50540c.jpg"
+  }
+}

@@ -2,33 +2,169 @@ $primaryColor: #002A5C;
 $secondaryColor: #2D5980;
 $accentColor: #7AC142;
 $highlightColor: #B2B7BB;
+$linkFontSize: 170%;
+
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black&display=swap');
 
 
 
 body {
-  background-color: whitesmoke;
+  // background-color: whitesmoke;
+  background-color: $highlightColor;
 }
 
 .container {
-  font-family: sans-serif;
+  font-family: 'Archivo Black', sans-serif;
   text-align: center;
   color: $accentColor;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  div{
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
 }
 
 header {
-  
   background-color: $secondaryColor;
+  height: 90px;
+  padding: 2%;
  
   h1{
     font-size: 150%;
   }
-  a {
-    margin: 5%;
-    color: $highlightColor;
-    text-decoration: none;
+
+  nav{
+    margin: 2%;
+
+    a{
+      margin: 3%;
+      font-size: 110%;
+    }
   }
 }
 
+a {
+  color: $highlightColor;
+  text-decoration: none;
+  font-size: $linkFontSize
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+#signin {
+  float: left;
+  margin: 20% 5%;
+  a{
+    font-size: 120%;
+    color: $secondaryColor;
+  }
+}
+
+#signup {
+  float: right;
+  margin: 20% 5%;
+  a{
+    font-size: 120%;
+    color: $secondaryColor;
+  }
+}
+
+img{
+  width: 40%;
+  height: auto;
+  margin: 3%;
+}
+
+input{
+  width: 20%;
+  height: 25px;
+  margin: 5%;
+}
+
+
+.adminPage{
+  h1{
+    color: $secondaryColor;
+  }
+  h2{
+    margin-bottom: 2%;
+    color: $secondaryColor;
+  }
+  form{
+    color: $secondaryColor;
+  }
+}
+
+//Player stats
+.playerStats{
+  margin: 2%;
+  h2{
+    margin-bottom: 2%;
+    color: $secondaryColor;
+  }
+  h1{
+    color: $secondaryColor;
+  }
+
+}
+
+.teamDescription {
+  color: $secondaryColor;
+  a{
+    color: $secondaryColor;
+    font-size: 100%;
+  }
+  
+}
+
+#root_description {
+  width: 30%;
+  height: 70px;
+}
+
+.form-group{
+  margin-bottom: -2%;
+}
+
 footer {
+  a{
+    color: $accentColor;
+    font-size: 100%;
+  }
   background-color: $secondaryColor;
+  margin: 2.5%;
+  padding: 2%;
+  margin-top: 250px;
+
+}
+.control-label {
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+}
+.form-control {
+  display: inline-block;
+}
+
+.adminButton {
+  padding: .75em;
+  margin: 1em;
+}
+
+.formButton {
+  width: 150px;
+  padding: 1.5em;
+  // margin: .5em;
+}
+
+.formForm {
+  width: 30%;
+}
+
+.statInput {
+  width: 30%;
 }
